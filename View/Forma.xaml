@@ -1,0 +1,186 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.Forma">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="White">
+            <Frame  Margin="10,30,10,0" BackgroundColor="#5F9EA0" BorderColor="#F8F8FF"  VerticalOptions="Center" Padding="5" CornerRadius="20">
+                <Frame BackgroundColor="#F8F8FF" BorderColor="#F8F8FF" Padding="10" VerticalOptions="Center"  CornerRadius="30">
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Label 
+                VerticalOptions="Center"
+                Text="About you"
+                TextColor="#5F9EA0"
+                FontSize="20"
+                FontAttributes="Bold">
+                            </Label>
+                            <Image Source="globe.jpg"
+                               HeightRequest="40"
+                               WidthRequest="60"></Image>
+                        </HorizontalStackLayout>
+                        <BoxView BackgroundColor="#5F9EA0" HeightRequest="1" Margin="15"></BoxView>
+                        <VerticalStackLayout Spacing="10">
+                            <Frame HeightRequest="80"
+                        Padding="8"
+                        BorderColor="#F8F8FF"
+                        BackgroundColor="#F8F8FF">
+                                <VerticalStackLayout>
+                                    <Label
+                         HorizontalOptions="Start"
+                         Text="Do you prefer winter over summer?"
+                         TextColor="#5F9EA0"
+                         FontSize="18"></Label>
+                                    <HorizontalStackLayout HorizontalOptions="Center" Padding="20" Spacing="30">
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Summer" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Winter" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                            <Frame HeightRequest="110"
+                        Padding="10"
+                        BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                <VerticalStackLayout>
+                                    <Label
+                         HorizontalOptions="Center"
+                         Text="Are you more attracted to traveling by bus or plane?"
+                         TextColor="#5F9EA0"
+                         FontSize="18"></Label>
+                                    <HorizontalStackLayout HorizontalOptions="Center" Padding="20" Spacing="65">
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF" BackgroundColor="#F8F8FF" >
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Bus" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Plane" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                            <Frame HeightRequest="80"
+                        Padding="10"
+                        BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                <VerticalStackLayout>
+                                    <Label
+                         HorizontalOptions="Start"
+                         Text="Are you a sweet or savoury food lover?"
+                         TextColor="#5F9EA0"
+                         FontSize="18"></Label>
+                                    <HorizontalStackLayout HorizontalOptions="Center" Padding="15" Spacing="40">
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"   BackgroundColor="#F8F8FF" >
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Savoury" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Sweet" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                            <Frame HeightRequest="100"
+                        Padding="8"
+                        BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                <VerticalStackLayout>
+                                    <Label
+                         HorizontalOptions="Center"
+                         Text="Are you more interested in hotels or apartments?"
+                         TextColor="#5F9EA0"
+                         FontSize="18"></Label>
+                                    <HorizontalStackLayout HorizontalOptions="Center" Padding="15" Spacing="15" >
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Apartments" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                        <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                            <HorizontalStackLayout>
+                                                <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                <Label VerticalOptions="Center" Text="Hotel" TextColor="#5F9EA0"></Label>
+                                            </HorizontalStackLayout>
+                                        </Frame>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+
+                            <Frame HeightRequest="140"
+                           Padding="10"
+                           BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                <VerticalStackLayout>
+                                    <Label 
+                            Text="Mark what attractions you would like to see:"
+                            TextColor="#5F9EA0"
+                            FontSize="18"></Label>
+                                    <HorizontalStackLayout Spacing="20" Padding="5">
+                                        <VerticalStackLayout Spacing="20">
+                                            <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                                <HorizontalStackLayout>
+                                                    <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                    <Label VerticalOptions="Center" Text="Shopping" TextColor="#5F9EA0"></Label>
+                                                </HorizontalStackLayout>
+                                            </Frame>
+                                            <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF" >
+                                                <HorizontalStackLayout>
+                                                    <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                    <Label VerticalOptions="Center" Text="Park" TextColor="#5F9EA0"></Label>
+                                                </HorizontalStackLayout>
+                                            </Frame>
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout Spacing="20">
+                                            <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                                <HorizontalStackLayout>
+                                                    <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                    <Label VerticalOptions="Center" Text="Museum" TextColor="#5F9EA0"></Label>
+                                                </HorizontalStackLayout>
+                                            </Frame>
+                                            <Frame Padding="0" HeightRequest="20" BorderColor="#F8F8FF"  BackgroundColor="#F8F8FF">
+                                                <HorizontalStackLayout>
+                                                    <CheckBox Color="#5F9EA0"  HorizontalOptions="Start" HeightRequest="25"/>
+                                                    <Label VerticalOptions="Center" Text="Castle" TextColor="#5F9EA0"></Label>
+                                                </HorizontalStackLayout>
+                                            </Frame>
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+
+                            </Frame>
+                            <Label Text="The data is taken for the best functionality of the app"
+                                   TextColor="#5F9EA0"
+                                   FontSize="10"
+                                   HorizontalOptions="Center"
+                                   ></Label>
+
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </Frame>
+            <Frame Margin="10" Padding="5" BackgroundColor="#5F9EA0" CornerRadius="10" BorderColor="#5F9EA0" HeightRequest="50" WidthRequest="160">
+                <Button BackgroundColor="#5F9EA0"
+                        Text="Submit"
+                        TextColor="White"
+                        Clicked="Button_Clicked"></Button>
+            </Frame>
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+    </ContentPage>

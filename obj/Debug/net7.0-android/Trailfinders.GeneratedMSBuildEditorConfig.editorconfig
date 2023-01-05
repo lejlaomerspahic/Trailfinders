@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Trailfinders
+build_property.ProjectDir = C:\Users\lejla\Desktop\trailfinders\
+
+[C:/Users/lejla/Desktop/trailfinders/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/AppTabbedPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.AppTabbedPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AppTabbedPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AppTabbedPage.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/Reservation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.Reservation.xaml
+build_metadata.AdditionalFiles.TargetPath = Reservation.xaml
+build_metadata.AdditionalFiles.RelativePath = Reservation.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/Forma.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Forma.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Forma.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Forma.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/HotelPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.HotelPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HotelPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HotelPage.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/Layout/HorizontalTemplateLayoutPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Layout.HorizontalTemplateLayoutPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Layout\HorizontalTemplateLayoutPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Layout\HorizontalTemplateLayoutPage.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\LoginPage.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/Registracija.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Registracija.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Registracija.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Registracija.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/TabDva.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.TabDva.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TabDva.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TabDva.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/TabJedan.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.TabJedan.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TabJedan.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TabJedan.xaml

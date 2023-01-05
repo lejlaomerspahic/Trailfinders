@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.HotelPage"
+             xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews">
+    <VerticalStackLayout BackgroundColor="white">
+
+        <StackLayout >
+            <Label Text="Details"
+                   TextColor="Grey"
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"></Label>
+            <Frame 
+                           HasShadow="True"
+                           Margin="10"
+                           Padding="0"
+                           WidthRequest="300"
+                           HeightRequest="280"
+                           HorizontalOptions="Center"
+                           CornerRadius="30">
+                <StackLayout>
+
+                    <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="300"
+                                   WidthRequest="380"
+                                   HorizontalOptions="Center" />
+                    <Button Text="{Binding Name}" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="30,-150,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                       
+                                    >
+                    </Button>
+
+                    <HorizontalStackLayout Margin="20,5,0,0"
+                                                   Spacing="5">
+                        <Image
+                                    Source="/Images/location.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"></Image>
+                        <Label Text="{Binding Location}"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                    </HorizontalStackLayout>
+                    <Label Text="{Binding Details}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   Margin="30,5,0,0"
+                                   TextColor="White"
+                                    />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        <Frame HeightRequest="150"
+               Margin="0,20,0,0"
+               HorizontalOptions="Center"
+               WidthRequest="350"
+               >
+            <Label Text="Nesto o ovoj lokaciji" TextColor="Grey"
+                   ></Label>
+           
+        </Frame>
+
+        <HorizontalStackLayout Spacing="40" Margin="0,20,0,0" HorizontalOptions="Center">
+            <Label Text="Check-in date   " TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
+            <Label Text="Check-out date" TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
+         </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,10,0,10">
+            <Frame  
+                               CornerRadius="10"
+                               BackgroundColor="#5F9EA0"
+                               WidthRequest="170"
+                               HeightRequest="45"
+                               Padding="0"
+                               BorderColor="Transparent">
+                <DatePicker                           
+                               Format="dd.M.yyyy."
+                    HorizontalOptions="Center"
+            ></DatePicker>
+            </Frame>
+            <Frame  
+                               CornerRadius="10"
+                               BackgroundColor="#5F9EA0"
+                               WidthRequest="170"
+                               HeightRequest="45"
+                               Padding="0"
+                               BorderColor="Transparent">
+                <DatePicker                           
+                               Format="dd.M.yyyy."
+                    HorizontalOptions="Center"
+            ></DatePicker>
+            </Frame>
+            </HorizontalStackLayout>
+
+
+        <Frame 
+                            HorizontalOptions="Center"
+                            CornerRadius="10"
+                            BackgroundColor="White"
+                            WidthRequest="350"
+                            HeightRequest="45"
+                            Padding="0"
+                Margin="0,20,0,0">
+            <Entry 
+                                x:Name="uneseniBrojLjudi"                                
+                                Placeholder="Number of people" 
+                                PlaceholderColor="#5F9EA0"
+                                HorizontalOptions="Center"
+                                Keyboard="Numeric">
+            </Entry>
+        </Frame>
+        <Frame  
+                               CornerRadius="20"
+                               BorderColor="#5F9EA0"
+                               WidthRequest="200"
+                               HeightRequest="55"
+                               Padding="0"
+                               Margin="0,50,30,0"
+                               HorizontalOptions="End">
+            <Button        Text="Reserved" 
+                           TextColor="#5F9EA0"
+                           HeightRequest="40"
+                           WidthRequest="180"
+                           FontSize="20"
+                           BackgroundColor="White"
+                           HorizontalOptions="Center"
+            ></Button>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.View.HorizontalTemplateLayoutPage"
+             xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews"
+             >
+    <ContentPage.BindingContext>
+        <viewmodels:HotelViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView MinimumHeightRequest="1080" >
+        
+        <VerticalStackLayout BackgroundColor="white">
+            <Frame WidthRequest="350"
+                           HeightRequest="40"
+                           Padding="10"
+                           CornerRadius="30"
+                           Margin="35,30,0,10"
+                           HorizontalOptions="Start"
+                           >
+                <SearchBar SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
+                   Placeholder="Filter" 
+                   TextColor="Black"/>
+
+            </Frame>
+            <Label
+                                Text="Special for you"
+                                TextColor="Grey"
+                                FontSize="25"
+                                FontAttributes="Bold"
+                                Margin="35,10,0,0"></Label>
+
+
+
+  
+
+                <CarouselView x:Name="carouselView"
+                      ItemsSource="{Binding Hotels}"
+                      BackgroundColor="White"
+                     
+                  >
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                            <Frame
+                           HasShadow="True"
+                           Margin="10"
+                           Padding="0"
+                           WidthRequest="330"
+                           HeightRequest="250"
+                           HorizontalOptions="Center"
+                           CornerRadius="30">
+                                <StackLayout>
+
+                                    <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="300"
+                                   WidthRequest="380"
+                                   HorizontalOptions="Center" />
+                                    <Button Text="{Binding Name}" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="30,-150,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                    >
+                                    </Button>
+
+                                    <HorizontalStackLayout Margin="20,5,0,0"
+                                                   Spacing="5">
+                                        <Image
+                                    Source="/Images/location.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"></Image>
+                                        <Label Text="{Binding Location}"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Details}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   Margin="30,5,0,0"
+                                   TextColor="White"
+                                    />
+                                </StackLayout>
+                            </Frame>
+
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+
+            <Label Text="All destination"
+                           TextColor="Grey"
+                           FontAttributes="Bold"
+                           FontSize="25"
+                           Margin="30,0,0,0">
+        </Label>
+
+            <BoxView BackgroundColor="Grey" HeightRequest="1" Margin="25,5,25,0"></BoxView>
+            <CollectionView ItemsSource="{Binding Hotels}"
+                            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                        <Frame WidthRequest="380" CornerRadius="20" HeightRequest="70"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:HotelViewModel}}, Path=TapCommand}"
+                                    CommandParameter="{Binding .}"
+                                    >
+                               
+                                </TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <HorizontalStackLayout >
+                            <Frame
+                                WidthRequest="50"
+                                CornerRadius="50"
+                                HeightRequest="50"
+                                    >
+                                    
+                                    <Image
+                                         Source="{Binding ImageUrl}" 
+                                         HeightRequest="95"
+                                        WidthRequest="95"
+                         
+                    />
+                            </Frame>
+                            <VerticalStackLayout >
+                                <Button BackgroundColor="WhiteSmoke"
+                                Text="{Binding Name}"
+                                TextColor="Black"
+                                HorizontalOptions="Start"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Button>
+                                    <Label
+                                Margin="15,0,0,0"
+                                Text="{Binding Details}"
+                                FontSize="14"
+                                TextColor="Grey"
+                                ></Label>
+                                    <HorizontalStackLayout HorizontalOptions="Start"
+                                                           Margin="15,0,0,0"
+                                               VerticalOptions="Center">
+                                        <Label Text="Price per night: "
+                                               TextColor="Grey"
+                                               ></Label>
+                                        <Label
+                                        Text="{Binding Price}"
+                                        FontSize="14"
+                                        TextColor="Grey"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                ></Label>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                                
+                             
+
+                            </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
