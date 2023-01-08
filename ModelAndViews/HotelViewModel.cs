@@ -55,6 +55,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Hotel AJWA Sultanahmet",
                 Location = "Istanbul, Turkey",
                 Details = "Standard Room with Queen Bed",
+                Information= "This special class category hotel is situated in old quarter of the city." +
+                " It features a spa and a roof-top terrace with panoramic views of Istanbul and the Marmara Sea",
                 ImageUrl = "https://i.pinimg.com/originals/1b/54/f1/1b54f1db2a7e441aa1da87261120b581.jpg",
                 Price = 150,
             });
@@ -65,6 +67,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Hotel Elysees Opera",
                 Location = "Paris, France",
                 Details = "Modern guest rooms with a balcony",
+                Information= "Alp Hotel is a small and charming hotel right in the Paris city centre," +
+                "600 metres from main neighbourhood. The hotel includes free Wi-Fi and a terrace.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/107785875.jpg?k=e45fbf035376d706bf80d4aa9913469235224a68c543be7fae5b2395c0c91e74&o=&hp=1",
                 Price = 100,
             });
@@ -74,6 +78,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Vila Suzana Parque Hotel",
                 Location = "Amsterdam, Netherlands", 
                 Details = "Small Double Room", 
+                Information= "Vila Suzana Parque Hotel is located alongside the Amstel river in Amsterdam. " +
+                "This hotel combines luxury, technology and sustainability in a living building shaped by nature.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/326822491.jpg?k=dc636958ccd56248febe13031bea5c2ba142ab7b015b1520604ea3d8e8c0bf4a&o=&hp=1", 
                 Price = 100,
             });
@@ -84,7 +90,9 @@ namespace Trailfinders.ModelAndViews
                 Name = "The Westin New York",
                 Location = "New York, United States",
                 Details = "Traditional double guest room",
-                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/24381386.jpg?k=bf782b9ab5fc2ebc9dc0f115303ad58d6b83c7e190ab136a6d41b32326802383&o=&hp=1",
+                Information= "Standing at Times Square, this Manhattan luxury hotel " +
+                "features an on-site restaurant and bar. The 42nd Street-Port Authority subway station is located just outside the hotel.",
+                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/24381693.jpg?k=1c0097441412b2b6fb7041d989e1902e11049be12a4251a09d7d465259464d25&o=&hp=1",
                 Price = 100,
             });
 
@@ -94,9 +102,11 @@ namespace Trailfinders.ModelAndViews
                 Name = "Golden Lion Tamarin",
                 Location = "Brasilia, Brasil",
                 Details = "Standard double Room",
+                Information = "Boasting a rooftop swimming pool with city views, a gym and a sauna, " +
+                "Golden Lion Tamarin is located between the Television Tower and City Park and includes free WiFi.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/327080575.jpg?k=a1a978598bc11e2a9c1ec539ea6d4fee764f2cd4972008691c23a43ed7f87e63&o=&hp=1",
                 Price = 100,
-            });
+            }) ;
 
             source.Add(new Hotel
             {
@@ -104,6 +114,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Hard Rock Hotel Budapest",
                 Location = "Budapest, Hungary",
                 Details = "Private suite",
+                Information= "Set in Budapest, 300 metres from Hungarian State Opera, " +
+                "Hard Rock Hotel Budapest offers accommodation with a restaurant, private parking, a fitness centre and a bar.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/335034022.jpg?k=2dfdd36a3fbfa275a7d764ab5b751511e8ec462510e434ebea061761bb86536e&o=&hp=1",
                 Price = 200,
             });
@@ -114,6 +126,9 @@ namespace Trailfinders.ModelAndViews
                 Name = "Japanese Macaque",
                 Location = "Tokyo, Japan",
                 Details = "Superior Double Room",
+                Information= "This 6-star hotel offers modern rooms with free Wi-Fi. " +
+                "It is less than 10 minutes' walk from the center. " +
+                "The hotel has a gym and a sauna.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197652579.jpg?k=2322075968b4904b2904fad038323d5bb1241b22fdf05ed9aa4bfec097e12bbb&o=&hp=1",
                 Price = 250,
             });
@@ -121,9 +136,11 @@ namespace Trailfinders.ModelAndViews
             source.Add(new Hotel
             {
                 ID = 8,
-                Name = "Mandrill",
+                Name = "Hotel Bella Riva ",
                 Location = "Kinshasa, Congo",
-                Details = "King Studio with Sofa Bed",
+                Details = "King room with Sofa Bed",
+                Information= "Located in Kinshasa, 7.4 km from Mbatu Museum, " +
+                "Hotel Bella Riva Kinshasa provides accommodation with a fitness centre, free private parking, a garden and a terrace.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/214654840.jpg?k=c847670dd9a0deeb4f35bc99afb7141663196aed3b3c7c2abdc98c736d9b5928&o=&hp=1",
                 Price=50,
             });
@@ -131,9 +148,12 @@ namespace Trailfinders.ModelAndViews
             source.Add(new Hotel
             {
                 ID = 9,
-                Name = "Proboscis Hotel",
+                Name = "Grand Kecubung Hotel",
                 Location = "Borneo, Indonesia",
-                Details = "Small Twin Room with balcony",
+                Details = "Modern confort twin Room",
+                Information= "Modern comfort awaits guests at Grand Kecubung Hotel. " +
+                "Featuring a gym and an outdoor pool, " +
+                "it houses air-conditioned rooms with private bathrooms.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/326822486.jpg?k=438b3aa6bd2fca3281161b891ba6b9fea37919b66fbc3acd19ba3b7b3d969e28&o=&hp=1",
                 Price=100,
             });
@@ -145,6 +165,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Dubai Deira Hotel",
                 Location = "Dubai, Emirates",
                 Details = "Deluxe Room",
+                Information= "Just 300 metres from Reef Shopping Mall, " +
+                "this 5-star hotel has an outdoor rooftop pool and spacious air-conditioned rooms in Deira District.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/178289405.jpg?k=2298d157c7a9748e25bf8fd05cd110617ad20519436dcaaab61ff81e511b06d6&o=&hp=1",
                 Price=300,
             });
@@ -155,6 +177,9 @@ namespace Trailfinders.ModelAndViews
                 Name = "Niyama Private Hotel",
                 Location = "Maldives",
                 Details = "Beach Room",
+                Information= "Luxurious hotel is tropical paradise " +
+                "offering a quiet private beach and free WiFi is available in the rooms and" +
+                " throughout the resort. Rooms offered are luxurious over water pool villas.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/181288994.jpg?k=fc418ac173ad7efc768a6c239d29c566f5ffdb657d1889d88002ceba9f18078d&o=&hp=1",
                 Price=300,
             });
@@ -165,6 +190,8 @@ namespace Trailfinders.ModelAndViews
                 Name = "Riu Atoll",
                 Location = "Male, Maldives",
                 Details = "Beach Villa",
+                Information = "Facing the beachfront, Riu Atoll-All Inclusive offers 4-star accommodation " +
+                "in Dhaalu Atoll and has an outdoor swimming pool, fitness centre and garden.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/99060502.jpg?k=fb996e90440c44c118afa23199c26db92cfbb62ff0f5e2ae87c146c1785320e5&o=&hp=1",
                 Price = 300,
             });
@@ -175,17 +202,14 @@ namespace Trailfinders.ModelAndViews
                 Name = "Hilton Garden Inn",
                 Location = "New York, United States",
                 Details = "King Room",
+                Information= "Located 805 metres from Times Square," +
+                " Hilton Garden Inn offers complimentary " +
+                "WiFi and a breakfast buffet to all its guests.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/326822494.jpg?k=69e3f7ee1772ff5f7426585e948484a8a7ba42e80713e912abbfaaf0e07ba6b4&o=&hp=1",
                 Price = 300,
             });
 
             Hotels = new ObservableCollection<Hotel>(source);
-        }
-
-        [CommunityToolkit.Mvvm.Input.RelayCommand]
-        async Task Tap(string s)
-        {
-            await Shell.Current.GoToAsync(nameof(HotelPage));
         }
 
         void FilterItems(string filter)
@@ -206,7 +230,6 @@ namespace Trailfinders.ModelAndViews
                 }
             }
         }
-
         void ItemChanged(Hotel item)
         {
             PreviousHotel = CurrentHotel;

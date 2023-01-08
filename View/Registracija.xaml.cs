@@ -23,10 +23,7 @@ public partial class Registracija : ContentPage
                 _user.Password = PassEntry.Text;
 
                 Navigation.PushModalAsync(new LoginPage(_user));
-               /* var userData = (User)BindingContext;
-                UserData database = await UserData.Instance;
-                await database.SaveItemAsync(userData);
-                await Navigation.PopAsync();*/
+              
             }
         }
         else

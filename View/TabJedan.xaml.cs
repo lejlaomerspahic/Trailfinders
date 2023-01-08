@@ -14,7 +14,8 @@ public partial class TabJedan : ContentPage
     }
 
     public async void redirect(object sender, EventArgs e)
-    {
+    {        
+        //App.Current.MainPage = new NavigationPage(new HorizontalTemplateLayoutPage());
         await Navigation.PushModalAsync(new HorizontalTemplateLayoutPage());
     }
 }

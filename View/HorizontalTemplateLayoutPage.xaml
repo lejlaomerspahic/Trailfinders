@@ -2,7 +2,7 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Trailfinders.View.HorizontalTemplateLayoutPage"
+             x:Class="Trailfinders.HorizontalTemplateLayoutPage"
              xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews"
              >
     <ContentPage.BindingContext>
@@ -11,35 +11,35 @@
     <ScrollView MinimumHeightRequest="1080" >
         
         <VerticalStackLayout BackgroundColor="white">
-            <Frame WidthRequest="350"
-                           HeightRequest="40"
-                           Padding="10"
-                           CornerRadius="30"
-                           Margin="35,30,0,10"
-                           HorizontalOptions="Start"
+            
+              <Frame WidthRequest="350"
+                           HeightRequest="50"
+                           Padding="0"
+                           CornerRadius="20"
+                           HorizontalOptions="Center"
+                           Margin="0,20,0,0"
                            >
-                <SearchBar SearchCommand="{Binding FilterCommand}"
+                <HorizontalStackLayout>
+                    <SearchBar SearchCommand="{Binding FilterCommand}"
                    SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
-                   Placeholder="Filter" 
-                   TextColor="Black"/>
-
+                   Placeholder="Search hotels by name"
+                   TextColor="Grey"
+                    WidthRequest="300"/>
+                    <Image Source="iconsearch.jpg" HeightRequest="30" HorizontalOptions="Center"></Image>
+                </HorizontalStackLayout>
             </Frame>
+
+            
             <Label
                                 Text="Special for you"
                                 TextColor="Grey"
                                 FontSize="25"
                                 FontAttributes="Bold"
-                                Margin="35,10,0,0"></Label>
-
-
-
-  
-
-                <CarouselView x:Name="carouselView"
+                                Margin="35,30,0,10"></Label>
+            <CarouselView x:Name="carouselView"
                       ItemsSource="{Binding Hotels}"
                       BackgroundColor="White"
-                     
-                  >
+                      >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -58,7 +58,8 @@
                                    HeightRequest="300"
                                    WidthRequest="380"
                                    HorizontalOptions="Center" />
-                                    <Button Text="{Binding Name}" 
+                                    
+                                    <Label Text="{Binding Name}" 
                                    FontAttributes="Bold"
                                    FontSize="18"
                                    TextColor="White"
@@ -68,7 +69,7 @@
                                     Padding="4,0,4,0"
                                     BackgroundColor="Transparent"
                                     >
-                                    </Button>
+                                    </Label>
 
                                     <HorizontalStackLayout Margin="20,5,0,0"
                                                    Spacing="5">
@@ -94,30 +95,26 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-
+            
+       
 
             <Label Text="All destination"
                            TextColor="Grey"
                            FontAttributes="Bold"
                            FontSize="25"
-                           Margin="30,0,0,0">
+                           Margin="30,20,0,10">
         </Label>
-
-            <BoxView BackgroundColor="Grey" HeightRequest="1" Margin="25,5,25,0"></BoxView>
-            <CollectionView ItemsSource="{Binding Hotels}"
-                            SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                        <Frame WidthRequest="380" CornerRadius="20" HeightRequest="70"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:HotelViewModel}}, Path=TapCommand}"
-                                    CommandParameter="{Binding .}"
-                                    >
-                               
-                                </TapGestureRecognizer>
-                            </Frame.GestureRecognizers>
-                            <HorizontalStackLayout >
+           
+            <ListView ItemsSource="{Binding Hotels}"
+                      RowHeight="80"
+                      ItemTapped="ListView_ItemTapped"
+                      >
+            <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <Frame WidthRequest="380" CornerRadius="20" HeightRequest="70"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
+                            
+                            <HorizontalStackLayout Margin="10">
                             <Frame
                                 WidthRequest="50"
                                 CornerRadius="50"
@@ -132,14 +129,15 @@
                     />
                             </Frame>
                             <VerticalStackLayout >
-                                <Button BackgroundColor="WhiteSmoke"
+                                <Label 
+                                    BackgroundColor="WhiteSmoke"
                                 Text="{Binding Name}"
                                 TextColor="Black"
                                 HorizontalOptions="Start"
                                 FontSize="18"
                                 FontAttributes="Bold"
                                 Padding="15,5,0,0"
-                                ></Button>
+                                ></Label>
                                     <Label
                                 Margin="15,0,0,0"
                                 Text="{Binding Details}"
@@ -166,9 +164,10 @@
 
                             </HorizontalStackLayout>
                     </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                        </ViewCell>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

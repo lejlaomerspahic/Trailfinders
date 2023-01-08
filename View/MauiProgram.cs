@@ -14,9 +14,6 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-        builder.Services.AddTransient<HotelPage>();
-        builder.Services.AddTransient<HotelDetailsViewModel>();
-
           
 
         return builder.Build();

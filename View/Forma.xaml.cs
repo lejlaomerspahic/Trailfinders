@@ -9,6 +9,6 @@ public partial class Forma : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new AppTabbedPage());
+        await Navigation.PushModalAsync(new AppFlyout());
     }
 }

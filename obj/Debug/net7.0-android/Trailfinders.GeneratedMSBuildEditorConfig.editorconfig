@@ -20,11 +20,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/lejla/Desktop/trailfinders/AppTabbedPage.xaml]
+[C:/Users/lejla/Desktop/trailfinders/AppFlyout.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.AppTabbedPage.xaml
-build_metadata.AdditionalFiles.TargetPath = AppTabbedPage.xaml
-build_metadata.AdditionalFiles.RelativePath = AppTabbedPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.AppFlyout.xaml
+build_metadata.AdditionalFiles.TargetPath = AppFlyout.xaml
+build_metadata.AdditionalFiles.RelativePath = AppFlyout.xaml
 
 [C:/Users/lejla/Desktop/trailfinders/Reservation.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -44,23 +44,29 @@ build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/lejla/Desktop/trailfinders/View/FlyoutMenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.FlyoutMenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\FlyoutMenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\FlyoutMenuPage.xaml
+
 [C:/Users/lejla/Desktop/trailfinders/View/Forma.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Forma.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Forma.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Forma.xaml
 
+[C:/Users/lejla/Desktop/trailfinders/View/HorizontalTemplateLayoutPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.HorizontalTemplateLayoutPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HorizontalTemplateLayoutPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HorizontalTemplateLayoutPage.xaml
+
 [C:/Users/lejla/Desktop/trailfinders/View/HotelPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.HotelPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\HotelPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\HotelPage.xaml
-
-[C:/Users/lejla/Desktop/trailfinders/View/Layout/HorizontalTemplateLayoutPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Layout.HorizontalTemplateLayoutPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\Layout\HorizontalTemplateLayoutPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\Layout\HorizontalTemplateLayoutPage.xaml
 
 [C:/Users/lejla/Desktop/trailfinders/View/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

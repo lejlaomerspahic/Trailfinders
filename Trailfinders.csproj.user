@@ -10,16 +10,19 @@
     <MauiXaml Update="App.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="AppTabbedPage.xaml">
+    <MauiXaml Update="AppFlyout.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Reservation.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\HotelPage.xaml">
+    <MauiXaml Update="View\FlyoutMenuPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\Layout\HorizontalTemplateLayoutPage.xaml">
+    <MauiXaml Update="View\HorizontalTemplateLayoutPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\HotelPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Forma.xaml">

@@ -33,7 +33,7 @@ public partial class LoginPage : ContentPage
         }
         else
         {
-            Navigation.PushModalAsync(new AppTabbedPage());
+            Navigation.PushModalAsync(new AppFlyout());
         }
     }
 

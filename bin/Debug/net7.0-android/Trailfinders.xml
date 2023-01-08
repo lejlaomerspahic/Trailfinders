@@ -4,11 +4,5 @@
         <name>Trailfinders</name>
     </assembly>
     <members>
-        <member name="F:Trailfinders.ModelAndViews.HotelViewModel.tapCommand">
-            <summary>The backing field for <see cref="P:Trailfinders.ModelAndViews.HotelViewModel.TapCommand"/>.</summary>
-        </member>
-        <member name="P:Trailfinders.ModelAndViews.HotelViewModel.TapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Trailfinders.ModelAndViews.HotelViewModel.Tap(System.String)"/>.</summary>
-        </member>
     </members>
 </doc>

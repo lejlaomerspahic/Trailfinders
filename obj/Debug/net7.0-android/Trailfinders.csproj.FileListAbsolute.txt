@@ -982,3 +982,6 @@ C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\stamp\_ConvertResou
 C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\resizetizer\r\drawable\carousel.png
+C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\resizetizer\r\drawable\flights.png
+C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-android\resizetizer\r\drawable\stays.jpg
