@@ -145,7 +145,7 @@
                         WidthRequest="40"
                         Clicked="numberOfPeopleCount2"></Button>
             </HorizontalStackLayout>
-        
+
         <Frame  
                                CornerRadius="20"
                                BorderColor="#5F9EA0"
@@ -163,6 +163,9 @@
                            HorizontalOptions="Center"
                            Clicked="Button_Clicked"
             ></Button>
+
         </Frame>
+        <Label x:Name="statusMessage">
+        </Label> 
     </VerticalStackLayout>
 </ContentPage>

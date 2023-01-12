@@ -1,10 +1,12 @@
-﻿using Trailfinders.ModelAndViews;
+﻿using Trailfinders.Data;
+using Trailfinders.ModelAndViews;
 using Trailfinders.Models;
 
 namespace Trailfinders;
 
 public partial class HorizontalTemplateLayoutPage : ContentPage
 {
+    
     public HorizontalTemplateLayoutPage()
     {
         InitializeComponent();
@@ -18,5 +20,6 @@ public partial class HorizontalTemplateLayoutPage : ContentPage
         var myListView = (ListView)sender;
         var odabraniHotel = (Hotel)myListView.SelectedItem;
         await Navigation.PushAsync(new NavigationPage(new HotelPage(odabraniHotel)));
+        
     }
 }

@@ -16,10 +16,10 @@
                                       />
                 <local:FlyoutPageItem Title="Attraction"
                                       IconSource="carousel.png"
-                                      TargetType="{x:Type local:TabJedan}" />
+                                      TargetType="{x:Type local:HorizontalTemplateLayoutPage}" />
                 <local:FlyoutPageItem Title="Flights"
                                       IconSource="flights.png"
-                                      TargetType="{x:Type local:TabJedan}" />
+                                      TargetType="{x:Type local:HorizontalTemplateLayoutPage}" />
             </x:Array>
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>

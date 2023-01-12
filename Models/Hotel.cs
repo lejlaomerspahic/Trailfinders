@@ -1,4 +1,6 @@
-﻿namespace Trailfinders.Models
+﻿using SQLite;
+
+namespace Trailfinders.Models
 {
     public class Hotel
     {

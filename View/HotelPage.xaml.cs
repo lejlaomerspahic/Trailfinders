@@ -1,6 +1,7 @@
 
 
 using System.Reflection.Metadata;
+using Trailfinders.Data;
 using Trailfinders.Models;
 
 namespace Trailfinders;
@@ -8,6 +9,7 @@ public partial class HotelPage : ContentPage
 {
     int count = 1;
     Hotel hotel;
+    ReservationRepository _repository = new ReservationRepository() ;
 
     public HotelPage(Hotel odabraniHotel)
     {
@@ -25,9 +27,15 @@ public partial class HotelPage : ContentPage
         endDate.MaximumDate = startDate.MinimumDate.AddDays(123);
     }
 
-  
+    public HotelPage()
+    {
+        InitializeComponent();
+       
+    }
 
-    private async void Button_Clicked(object sender, EventArgs e)
+
+
+    private void Button_Clicked(object sender, EventArgs e)
     {
        if(startDate.Date > endDate.Date)
         {
@@ -51,7 +59,17 @@ public partial class HotelPage : ContentPage
                 price = hotel.Price  * numberOfDays;
             }
 
-            string poruka =  "\r\nTotal price: " + price*(-1) + " EUR" +
+
+
+        statusMessage.Text = "";
+
+        _repository.AddNewReservation(name.Text, location.Text,imageUrl.Source.ToString(),price);
+        statusMessage.Text = _repository.StatusMessage;
+       
+
+
+
+        string poruka =  "\r\nTotal price: " + price*(-1) + " EUR" +
                                        "\r\nNumber of people: " + count.ToString() +
                        "\r\nCheck-in date: " + startDate.Date.ToString("dd.M.yyyy.") +
                                        "\r\nCheck-out date: " + endDate.Date.ToString("dd.M.yyyy.");

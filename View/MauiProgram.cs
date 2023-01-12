@@ -1,4 +1,5 @@
-﻿using Trailfinders.ModelAndViews;
+﻿using Trailfinders.Data;
+using Trailfinders.ModelAndViews;
 
 namespace Trailfinders.View;
 
@@ -14,7 +15,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
-          
+
+        builder.Services.AddSingleton<HotelPage>();
+        builder.Services.AddSingleton<ReservationRepository>();
 
         return builder.Build();
     }

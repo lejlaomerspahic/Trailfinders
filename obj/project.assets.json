@@ -27510,11 +27510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lejla\\Desktop\\trailfinders\\Trailfinders.csproj",
+      "projectUniqueName": "C:\\Users\\lejla\\Desktop\\Trailfinders\\Trailfinders.csproj",
       "projectName": "Trailfinders",
-      "projectPath": "C:\\Users\\lejla\\Desktop\\trailfinders\\Trailfinders.csproj",
+      "projectPath": "C:\\Users\\lejla\\Desktop\\Trailfinders\\Trailfinders.csproj",
       "packagesPath": "C:\\Users\\lejla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lejla\\Desktop\\trailfinders\\obj\\",
+      "outputPath": "C:\\Users\\lejla\\Desktop\\Trailfinders\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

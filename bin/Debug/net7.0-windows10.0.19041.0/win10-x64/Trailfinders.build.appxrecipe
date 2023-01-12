@@ -604,7 +604,7 @@
     <AppxPackagedFile Include="C:\Users\lejla\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.27\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\.nuget\packages\communitytoolkit.mvvm\8.1.0-preview3\lib\net6.0\CommunityToolkit.Mvvm.dll">
+    <AppxPackagedFile Include="C:\Users\lejla\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
@@ -727,21 +727,6 @@
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\lejla12SplashScreen.scale-400.png">
       <PackagePath>lejla12SplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
-      <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
-      <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
-      <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
-      <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
-      <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
     </AppxPackagedFile>
@@ -750,9 +735,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\aletter.scale-100.png">
       <PackagePath>aletter.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\alpe.scale-100.jpg">
-      <PackagePath>alpe.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
@@ -892,6 +874,9 @@
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carousel.scale-100.png">
+      <PackagePath>carousel.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dletter.scale-100.png">
       <PackagePath>dletter.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -910,20 +895,17 @@
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\flights.scale-100.png">
+      <PackagePath>flights.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\globe.scale-100.png">
       <PackagePath>globe.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\iconsearch.scale-100.png">
       <PackagePath>iconsearch.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lejla.scale-100.png">
-      <PackagePath>lejla.scale-100.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lejla12.scale-100.png">
       <PackagePath>lejla12.scale-100.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\lejlaaa.scale-100.png">
-      <PackagePath>lejlaaa.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\location.scale-100.png">
       <PackagePath>location.scale-100.png</PackagePath>
@@ -942,6 +924,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\srcezeleno.scale-100.png">
       <PackagePath>srcezeleno.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lejla\Desktop\trailfinders\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stays.scale-100.jpg">
+      <PackagePath>stays.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
