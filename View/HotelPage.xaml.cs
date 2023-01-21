@@ -9,7 +9,6 @@ public partial class HotelPage : ContentPage
 {
     int count = 1;
     Hotel hotel;
-    ReservationRepository _repository = new ReservationRepository() ;
 
     public HotelPage(Hotel odabraniHotel)
     {
@@ -27,11 +26,7 @@ public partial class HotelPage : ContentPage
         endDate.MaximumDate = startDate.MinimumDate.AddDays(123);
     }
 
-    public HotelPage()
-    {
-        InitializeComponent();
-       
-    }
+
 
 
 
@@ -58,14 +53,6 @@ public partial class HotelPage : ContentPage
             {
                 price = hotel.Price  * numberOfDays;
             }
-
-
-
-        statusMessage.Text = "";
-
-        _repository.AddNewReservation(name.Text, location.Text,imageUrl.Source.ToString(),price);
-        statusMessage.Text = _repository.StatusMessage;
-       
 
 
 

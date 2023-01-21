@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.View.Hotels"
+             xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews">
+    <ContentPage.BindingContext>
+        <viewmodels:HotelViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView BackgroundColor="white">
+        <StackLayout>
+
+            <Frame 
+                    HasShadow="True"
+                    Padding="0"
+                    HeightRequest="210"
+                WidthRequest="550"
+                    HorizontalOptions="Center"
+                    CornerRadius="30">
+
+                <StackLayout>
+
+                    <Image Source="slika.jpg" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="250"
+                                   WidthRequest="580"
+                                   HorizontalOptions="Center" 
+                           />
+                    <Frame Margin="0,-220,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
+                        <Label 
+                                   Text="Hotels"
+                                   FontAttributes="Bold"
+                                   FontSize="35"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="40"
+                                   BackgroundColor="Transparent"
+                                       
+                                    >
+                    </Label>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+            
+            <Frame WidthRequest="360"
+                           HeightRequest="55"
+                           Padding="0"
+                           CornerRadius="10"
+                           HorizontalOptions="Center"
+                           Margin="0,-30,0,20"
+                           >
+                <HorizontalStackLayout>
+                    <SearchBar SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
+                   Placeholder="Search hotels by name"
+                   TextColor="Grey"
+                               VerticalOptions="Center"
+                   WidthRequest="300"/>
+                    <Image Source="iconsearch.jpg" HeightRequest="30" HorizontalOptions="Center"></Image>
+                </HorizontalStackLayout>
+            </Frame>
+          
+           
+            <ListView ItemsSource="{Binding Hotels}"
+                      RowHeight="130"
+                      Margin="0,0,0,0"
+                      ItemTapped="ListView_ItemTapped"
+                      >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <!--BUG: https://github.com/dotnet/maui/issues/11323-->
+                            <!--Sadržaj Frame jednostavno uokviriti u GRID kako bi se izbjegao bug koji nastaje pri rendanju Frmae objekata.-->
+                            <!--Otvoren Grid-->
+                            <Grid>
+                                <Frame WidthRequest="380" CornerRadius="20" HeightRequest="110"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
+
+                                    <HorizontalStackLayout Margin="10">
+                                        <Frame
+                                WidthRequest="70"
+                                CornerRadius="50"
+                                HeightRequest="70"
+                                    >
+
+                                            <Image
+                                         Source="{Binding ImageUrl}" 
+                                         HeightRequest="125"
+                                        WidthRequest="155"
+                         
+                    />
+                                        </Frame>
+                                        <VerticalStackLayout VerticalOptions="Center">
+                                            <Label 
+                                    BackgroundColor="WhiteSmoke"
+                                Text="{Binding Name}"
+                                TextColor="Black"
+                                HorizontalOptions="Start"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                                            <Label
+                                Margin="15,0,0,0"
+                                Text="{Binding Details}"
+                                FontSize="14"
+                                TextColor="Grey"
+                                ></Label>
+                                            <HorizontalStackLayout HorizontalOptions="Start"
+                                                           Margin="15,0,0,0"
+                                               VerticalOptions="Center">
+                                                <Label Text="Price per night: "
+                                               TextColor="Grey"
+                                               ></Label>
+                                                <Label
+                                        Text="{Binding Price}"
+                                        FontSize="14"
+                                        TextColor="#5F9EA0"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                                    FontAttributes="Bold"
+                                ></Label>
+                                                <Label
+                                                     FontSize="14"
+                                        TextColor="#5F9EA0"
+                                        VerticalOptions="Center"
+                                         Text="€"
+                                                    FontAttributes="Bold"
+                                         HorizontalOptions="Center"></Label>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+
+
+                                    </HorizontalStackLayout>
+                                </Frame>
+                                <!--Zatvoren Grid-->
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

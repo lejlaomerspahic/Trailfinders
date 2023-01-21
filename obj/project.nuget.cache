@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zCpOp2VzOupavWI9rcrQdBArGHerAjbhcZo1LJkpJMZloOaRIuR/Up1XM3RKA4keR/px3QbQiYbVjnRZ9PYg2Q==",
+  "dgSpecHash": "mV47dTUNO/I9Fsq+MwlbgLSzZp4VpKywz9rAY1gQbnAAVsVz/v/02tRDcrUQW21WeVP5VQ7bPyC4DERxb2285Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lejla\\Desktop\\trailfinders\\Trailfinders.csproj",
+  "projectFilePath": "C:\\Users\\lejla\\Desktop\\Trailfinders\\Trailfinders.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lejla\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\lejla\\.nuget\\packages\\googlegson\\2.9.1\\googlegson.2.9.1.nupkg.sha512",

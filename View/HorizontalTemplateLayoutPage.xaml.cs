@@ -1,25 +1,19 @@
-﻿using Trailfinders.Data;
-using Trailfinders.ModelAndViews;
+﻿using Trailfinders.ModelAndViews;
 using Trailfinders.Models;
+using Trailfinders.View;
 
 namespace Trailfinders;
 
 public partial class HorizontalTemplateLayoutPage : ContentPage
 {
-    
     public HorizontalTemplateLayoutPage()
     {
         InitializeComponent();
         BindingContext = new HotelViewModel();
     }
 
-    
-
-    private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-        var myListView = (ListView)sender;
-        var odabraniHotel = (Hotel)myListView.SelectedItem;
-        await Navigation.PushAsync(new NavigationPage(new HotelPage(odabraniHotel)));
-        
+        await Navigation.PushAsync(new Hotels());
     }
 }

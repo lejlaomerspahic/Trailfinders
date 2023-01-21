@@ -11,54 +11,40 @@
     <ScrollView MinimumHeightRequest="1080" >
         
         <VerticalStackLayout BackgroundColor="white">
-            
-              <Frame WidthRequest="350"
-                           HeightRequest="50"
-                           Padding="0"
-                           CornerRadius="20"
-                           HorizontalOptions="Center"
-                           Margin="0,20,0,0"
-                           >
-        <HorizontalStackLayout>
-              <SearchBar SearchCommand="{Binding FilterCommand}"
-                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
-                   Placeholder="Search hotels by name"
-                   TextColor="Grey"
-                   WidthRequest="300"/>
-        <Image Source="iconsearch.jpg" HeightRequest="30" HorizontalOptions="Center"></Image>
-        </HorizontalStackLayout>
-               </Frame>
+            <Border  StrokeThickness="-1" StrokeShape="RoundRectangle 0,0,50,50" HeightRequest="120"  >
+                <Frame BackgroundColor="#5F9EA0" >
+                    <VerticalStackLayout>
+                        <Label Text="Find a Home" TextColor="White" FontAttributes="Bold" FontSize="30"></Label>
+                        <Label Text="whenever you are!" TextColor="White" FontAttributes="Italic" FontSize="30"></Label>
+                    </VerticalStackLayout>
+                </Frame>
+            </Border>
 
-            
-            <Label
-                                Text="Special for you"
-                                TextColor="Grey"
-                                FontSize="25"
-                                FontAttributes="Bold"
-                                Margin="35,20,0,10"></Label>
             <CarouselView x:Name="carouselView"
                       ItemsSource="{Binding Hotels}"
                       BackgroundColor="White"
+                          Margin="0,20,0,0"
                       >
-            <CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout >
                             <Frame
                            HasShadow="True"
-                           Margin="10"
+                           Margin="5"
                            Padding="0"
-                           WidthRequest="330"
+                           WidthRequest="350"
                            HeightRequest="250"
                            HorizontalOptions="Center"
                            CornerRadius="30">
                                 <StackLayout>
+                                    
 
                                     <Image Source="{Binding ImageUrl}" 
                                    Aspect="AspectFill"
                                    HeightRequest="300"
                                    WidthRequest="380"
                                    HorizontalOptions="Center" />
-                                    
+
                                     <Label Text="{Binding Name}" 
                                    FontAttributes="Bold"
                                    FontSize="18"
@@ -88,86 +74,49 @@
                                    Margin="30,5,0,0"
                                    TextColor="White"
                                     />
-                                </StackLayout>
-                            </Frame>
-
-                    </StackLayout>
-                </DataTemplate>
-            </CarouselView.ItemTemplate>
-        </CarouselView>
-            
-       
-
-            <Label Text="All hotels"
-                           TextColor="Grey"
-                           FontAttributes="Bold"
-                           FontSize="25"
-                           Margin="30,20,0,10">
-        </Label>
-           
-            <ListView ItemsSource="{Binding Hotels}"
-                      RowHeight="80"
-                      ItemTapped="ListView_ItemTapped"
-                      >
-            <ListView.ItemTemplate >
-                    <DataTemplate >
-                        <ViewCell >
-                            <Frame WidthRequest="380" CornerRadius="20" HeightRequest="70"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
-                            
-                            <HorizontalStackLayout Margin="10">
-                            <Frame
-                                WidthRequest="50"
-                                CornerRadius="50"
-                                HeightRequest="50"
-                                    >
-                                    
-                                    <Image
-                                         Source="{Binding ImageUrl}" 
-                                         HeightRequest="95"
-                                        WidthRequest="95"
-                         
-                    />
-                            </Frame>
-                            <VerticalStackLayout >
-                                <Label 
-                                    BackgroundColor="WhiteSmoke"
-                                Text="{Binding Name}"
-                                TextColor="Black"
-                                HorizontalOptions="Start"
-                                FontSize="18"
-                                FontAttributes="Bold"
-                                Padding="15,5,0,0"
-                                ></Label>
-                                    <Label
-                                Margin="15,0,0,0"
-                                Text="{Binding Details}"
-                                FontSize="14"
+                                    <Frame Padding="10"
+                   BorderColor="Transparent"
+                   HorizontalOptions="Start"
+                   Margin="-20,-210,0,0"
+                   HasShadow="False"
+                   CornerRadius="20"
+                   WidthRequest="200"
+                                           HeightRequest="45"
+                                           
+                   >
+                                        <HorizontalStackLayout >
+                                            <Button
+                                Text="Hotels"
                                 TextColor="Grey"
-                                ></Label>
-                                    <HorizontalStackLayout HorizontalOptions="Start"
-                                                           Margin="15,0,0,0"
-                                               VerticalOptions="Center">
-                                        <Label Text="Price per night: "
-                                               TextColor="Grey"
-                                               ></Label>
-                                        <Label
-                                        Text="{Binding Price}"
-                                        FontSize="14"
-                                        TextColor="Grey"
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Center"
-                                ></Label>
-                                    </HorizontalStackLayout>
-                                </VerticalStackLayout>
-                                
-                             
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Clicked="Button_Clicked"
+                                BackgroundColor="White"
+                        WidthRequest="70"
+                        Margin="50,0,0,0"
+                        Padding="5"
+                        HeightRequest="40"
+                                                
+                        
+                >
 
-                            </HorizontalStackLayout>
-                    </Frame>
-                        </ViewCell>
+                                            </Button>
+                                            <Image Source="next.jpg"
+                       HeightRequest="20"
+                       
+                       ></Image>
+                                        </HorizontalStackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                
+                            </Frame>
+
+                        </StackLayout>
                     </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+           
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
