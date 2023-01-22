@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.View.Flights"
+             xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews">
+    <ContentPage.BindingContext>
+        <viewmodels:FlightViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView BackgroundColor="white">
+        <StackLayout>
+
+            <Frame 
+                    HasShadow="True"
+                    Padding="0"
+                    HeightRequest="220"
+                    WidthRequest="550"
+                    HorizontalOptions="Center"
+                    CornerRadius="30">
+
+                <StackLayout>
+
+                    <Image         Source="air1.jpg" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="260"
+                                   WidthRequest="410"
+                                   HorizontalOptions="Center" 
+                           />
+                    <Frame Margin="0,-210,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
+                        <Label 
+                                   Text="Flights"
+                                   FontAttributes="Bold"
+                                   FontSize="35"
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   HeightRequest="50"
+                                   BackgroundColor="Transparent"
+                                       
+                                    >
+                    </Label>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+            
+            <Frame WidthRequest="360"
+                           HeightRequest="55"
+                           Padding="0"
+                           CornerRadius="10"
+                           HorizontalOptions="Center"
+                           Margin="0,-30,0,20"
+                           >
+                <HorizontalStackLayout>
+                    <SearchBar SearchCommand="{Binding FilterCommand}"
+                   SearchCommandParameter="{Binding Source={RelativeSource Self}, Path=Text}"
+                   Placeholder="Search flights by name"
+                   TextColor="Grey"
+                               VerticalOptions="Center"
+                   WidthRequest="300"/>
+                    <Image Source="iconsearch.jpg" HeightRequest="30" HorizontalOptions="Center"></Image>
+                </HorizontalStackLayout>
+            </Frame>
+
+
+            <ListView ItemsSource="{Binding Flights}"
+                      RowHeight="130"
+                      Margin="0,0,0,0">
+                <!--ItemTapped="ListView_ItemTapped"-->
+                      
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <Grid>
+                                <Frame WidthRequest="380" CornerRadius="20" HeightRequest="110"  Padding="20,0,0,0" Margin="5"  BackgroundColor="White">
+
+                                    <HorizontalStackLayout Margin="10">
+                                        <Frame
+                                WidthRequest="70"
+                                CornerRadius="50"
+                                HeightRequest="70"
+                                    >
+
+                                            <Image
+                                         Source="{Binding ImageUrl}" 
+                                         HeightRequest="125"
+                                        WidthRequest="155"
+                         
+                    />
+                                        </Frame>
+                                        <VerticalStackLayout VerticalOptions="Center">
+                                            <HorizontalStackLayout>
+                                                <Label 
+                                    BackgroundColor="white"
+                                Text="{Binding DeparturePlace}"
+                                TextColor="Grey"
+                                HorizontalOptions="Start"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                                                <Label 
+                                    BackgroundColor="white"
+                                Text="-"
+                                TextColor="Grey"
+                                HorizontalOptions="Start"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                                                <Label 
+                                    BackgroundColor="white"
+                                Text="{Binding ArrivalPlace}"
+                                TextColor="Grey"
+                                HorizontalOptions="Start"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                                            </HorizontalStackLayout>
+                                            <Label
+                                Margin="15,0,0,0"
+                                Text="{Binding Details}"
+                                FontSize="14"
+                                TextColor="Grey"
+                                ></Label>
+                                            <HorizontalStackLayout HorizontalOptions="Start"
+                                                           Margin="15,0,0,0"
+                                               VerticalOptions="Center">
+                                                <Label Text="Price per night: "
+                                               TextColor="Grey"
+                                               ></Label>
+                                                <Label
+                                        Text="{Binding Price}"
+                                        FontSize="14"
+                                        TextColor="#5F9EA0"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                                    FontAttributes="Bold"
+                                ></Label>
+                                                <Label
+                                                     FontSize="14"
+                                        TextColor="#5F9EA0"
+                                        VerticalOptions="Center"
+                                         Text="€"
+                                                    FontAttributes="Bold"
+                                         HorizontalOptions="Center"></Label>
+                                            </HorizontalStackLayout>
+                                        </VerticalStackLayout>
+
+
+
+                                    </HorizontalStackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.FlightPage"
+             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             android:Application.WindowSoftInputModeAdjust="Pan">
+    <VerticalStackLayout BackgroundColor="white">
+        <StackLayout>
+            <Label Text="Details"
+                   TextColor="Grey"
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"></Label>
+            <Frame 
+                    HasShadow="True"
+                    Margin="10"
+                    Padding="0"
+                    WidthRequest="330"
+                    HeightRequest="250"
+                    HorizontalOptions="Center"
+                    CornerRadius="30">
+                
+                <StackLayout>
+
+                    <Image x:Name="imageUrl" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="300"
+                                   WidthRequest="380"
+                                   HorizontalOptions="Center" />
+                    <Button x:Name="name"
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="30,-150,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                       
+                                    >
+                    </Button>
+
+                    <HorizontalStackLayout Margin="20,5,0,0"
+                                                   Spacing="5">
+                        <Image
+                                    Source="/Images/location.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"></Image>
+                        <Label x:Name="location"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                    </HorizontalStackLayout>
+                    <Label x:Name="details"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   Margin="30,5,0,0"
+                                   TextColor="White"
+                                    />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        <Frame HeightRequest="150"
+               Margin="0,5,0,0"
+               HorizontalOptions="Center"
+               WidthRequest="370"
+               HasShadow="False"
+               >
+            <VerticalStackLayout>
+                <Label x:Name="information" FontSize="16" TextColor="Grey"
+                   ></Label>
+                <HorizontalStackLayout>
+                    <Label Text="Cijena jednog nočenja po osobi: " TextColor="Grey" FontSize="17"></Label>
+                    <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
+                    <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+
+        <HorizontalStackLayout Spacing="40" Margin="0,5,0,0" HorizontalOptions="Center">
+            <Label Text="Check-in date   " TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
+            <Label Text="Check-out date" TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
+         </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,10,0,10">
+            <Frame  
+                               CornerRadius="10"
+                               BackgroundColor="#5F9EA0"
+                               WidthRequest="170"
+                               HeightRequest="45"
+                               Padding="0"
+                               BorderColor="Transparent">
+                <DatePicker            
+                               x:Name="startDate"
+                               Format="dd.M.yyyy."
+                               HorizontalOptions="Center"/>
+            </Frame>
+            <Frame  
+                               CornerRadius="10"
+                               BackgroundColor="#5F9EA0"
+                               WidthRequest="170"
+                               HeightRequest="45"
+                               Padding="0"
+                               BorderColor="Transparent">
+                <DatePicker                           
+                               Format="dd.M.yyyy."
+                               HorizontalOptions="Center"
+                               x:Name="endDate"/>
+            </Frame>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,0" Spacing="20">
+            <Button Text="-"
+                        TextColor="White"
+                        FontSize="10"
+                        CornerRadius="50"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        Clicked="numberOfPeopleCount1"></Button>
+            <Frame>
+                <Label 
+                                x:Name="numberOfPeople"
+                                HorizontalOptions="Center"
+                        Text="Number of people: 1"
+                        WidthRequest="140"
+                        TextColor="Grey"
+                        FontSize="15">
+                </Label>
+            </Frame>
+            <Button Text="+"
+                        TextColor="White"
+                        FontSize="10"
+                        CornerRadius="50"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        Clicked="numberOfPeopleCount2"></Button>
+        </HorizontalStackLayout>
+        <Frame  
+                               CornerRadius="20"
+                               BorderColor="#5F9EA0"
+                               WidthRequest="200"
+                               HeightRequest="55"
+                               Padding="0"
+                               Margin="0,40,0,0"
+                               HorizontalOptions="Center">
+            <Button        Text="Reserved" 
+                           TextColor="#5F9EA0"
+                           HeightRequest="40"
+                           WidthRequest="180"
+                           FontSize="20"
+                           BackgroundColor="White"
+                           HorizontalOptions="Center"
+                           Clicked="Button_Clicked"
+            ></Button>
+
+        </Frame>
+        <Label x:Name="statusMessage">
+        </Label> 
+    </VerticalStackLayout>
+</ContentPage>

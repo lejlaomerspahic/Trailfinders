@@ -1,7 +1,5 @@
 ﻿using Trailfinders.Models;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 
@@ -11,31 +9,14 @@ namespace Trailfinders.ModelAndViews
     {
         readonly IList<Hotel> source;
         public ObservableCollection<Hotel> Hotels { get; private set; }
-        public IList<Hotel> EmptyHotels { get; private set; }
-
-        public Hotel PreviousHotel { get; set; }
-        public Hotel CurrentHotel { get; set; }
-        public Hotel CurrentItem { get; set; }
-        public int PreviousPosition { get; set; }
-        public int CurrentPosition { get; set; }
-        public int Position { get; set; }
-
         public ICommand FilterCommand => new Command<string>(FilterItems);
-        public ICommand ItemChangedCommand => new Command<Hotel>(ItemChanged);
-        public ICommand PositionChangedCommand => new Command<int>(PositionChanged);
-        public ICommand DeleteCommand => new Command<Hotel>(RemoveHotel);
-        public ICommand FavoriteCommand => new Command<Hotel>(FavoriteHotel);
 
 
         public HotelViewModel()
         {
             source = new List<Hotel>();
             CreateHotelCollection();
-
-            CurrentItem = Hotels.Skip(3).FirstOrDefault();
-            OnPropertyChanged("CurrentItem");
-            Position = 3;
-            OnPropertyChanged("Position");
+        
         }
         async Task goToDetalsAsync(Hotel hotel)
         {
@@ -49,6 +30,17 @@ namespace Trailfinders.ModelAndViews
         }
         void CreateHotelCollection()
         {
+            source.Add(new Hotel
+            {
+                ID = 4,
+                Name = "The Westin New York",
+                Location = "New York, United States",
+                Details = "Traditional double guest room",
+                Information = "Standing at Times Square, this Manhattan luxury hotel " +
+                "features an on-site restaurant and bar. The 42nd Street-Port Authority subway station is located just outside the hotel.",
+                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/24381693.jpg?k=1c0097441412b2b6fb7041d989e1902e11049be12a4251a09d7d465259464d25&o=&hp=1",
+                Price = 100,
+            });
             source.Add(new Hotel
             {
                 ID = 1,
@@ -84,17 +76,7 @@ namespace Trailfinders.ModelAndViews
                 Price = 100,
             });
             
-            source.Add(new Hotel
-            {
-                ID = 4,
-                Name = "The Westin New York",
-                Location = "New York, United States",
-                Details = "Traditional double guest room",
-                Information= "Standing at Times Square, this Manhattan luxury hotel " +
-                "features an on-site restaurant and bar. The 42nd Street-Port Authority subway station is located just outside the hotel.",
-                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/24381693.jpg?k=1c0097441412b2b6fb7041d989e1902e11049be12a4251a09d7d465259464d25&o=&hp=1",
-                Price = 100,
-            });
+            
 
             source.Add(new Hotel
             {
@@ -116,7 +98,7 @@ namespace Trailfinders.ModelAndViews
                 Details = "Private suite",
                 Information= "Set in Budapest, 300 metres from Hungarian State Opera, " +
                 "Hard Rock Hotel Budapest offers accommodation with a restaurant, private parking, a fitness centre and a bar.",
-                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/335034022.jpg?k=2dfdd36a3fbfa275a7d764ab5b751511e8ec462510e434ebea061761bb86536e&o=&hp=1",
+                ImageUrl = "https://www.hardrockhotels.com/budapest/files/6004/Platinum_Suite_-_Bedroom.jpg",
                 Price = 200,
             });
 
@@ -131,18 +113,6 @@ namespace Trailfinders.ModelAndViews
                 "The hotel has a gym and a sauna.",
                 ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197652579.jpg?k=2322075968b4904b2904fad038323d5bb1241b22fdf05ed9aa4bfec097e12bbb&o=&hp=1",
                 Price = 250,
-            });
-
-            source.Add(new Hotel
-            {
-                ID = 8,
-                Name = "Hotel Bella Riva ",
-                Location = "Kinshasa, Congo",
-                Details = "King room with Sofa Bed",
-                Information= "Located in Kinshasa, 7.4 km from Mbatu Museum, " +
-                "Hotel Bella Riva Kinshasa provides accommodation with a fitness centre, free private parking, a garden and a terrace.",
-                ImageUrl = "https://cf.bstatic.com/xdata/images/hotel/max1280x900/214654840.jpg?k=c847670dd9a0deeb4f35bc99afb7141663196aed3b3c7c2abdc98c736d9b5928&o=&hp=1",
-                Price=50,
             });
 
             source.Add(new Hotel
@@ -230,42 +200,6 @@ namespace Trailfinders.ModelAndViews
                 }
             }
         }
-        void ItemChanged(Hotel item)
-        {
-            PreviousHotel = CurrentHotel;
-            CurrentHotel = item;
-            OnPropertyChanged("PreviousHotel");
-            OnPropertyChanged("CurrentHotel");
-        }
-
-        void PositionChanged(int position)
-        {
-            PreviousPosition = CurrentPosition;
-            CurrentPosition = position;
-            OnPropertyChanged("PreviousPosition");
-            OnPropertyChanged("CurrentPosition");
-        }
-
-        void RemoveHotel(Hotel Hotel)
-        {
-            if (Hotels.Contains(Hotel))
-            {
-                Hotels.Remove(Hotel);
-            }
-        }
-
-        void FavoriteHotel(Hotel Hotel)
-        {
-            Hotel.IsFavorite = !Hotel.IsFavorite;
-        }
-
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
+     
     }
 }

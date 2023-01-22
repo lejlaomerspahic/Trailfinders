@@ -72,7 +72,7 @@
                 <Label x:Name="information" FontSize="16" TextColor="Grey"
                    ></Label>
                 <HorizontalStackLayout>
-                    <Label Text="Cijena jednog nočenja po osobi: " TextColor="Grey" FontSize="17"></Label>
+                    <Label Text="Price for night per person: " TextColor="Grey" FontSize="17"></Label>
                     <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
                     <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
                 </HorizontalStackLayout>

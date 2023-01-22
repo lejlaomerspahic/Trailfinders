@@ -35,14 +35,21 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Images\lejla12.png" BaseSize="128,128" />
 
 		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\Images\srce.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -53,39 +60,54 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\LoginPage.xaml.cs">
-	    <DependentUpon>LoginPage.xaml</DependentUpon>
-	  </Compile>
+		<Compile Update="View\HorizontalTemplateLayoutPage.xaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="View\FlightPage.xaml.cs">
+		  <DependentUpon>FlightPage.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="View\Flights.xaml.cs">
+		  <DependentUpon>Flights.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="View\LoginPage.xaml.cs">
+			<DependentUpon>LoginPage.xaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 
 
 
 	<ItemGroup>
-	  <MauiXaml Update="App.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="AppFlyout.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\FlyoutMenuPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\HorizontalTemplateLayoutPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\HotelPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Forma.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Hotels.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\Registracija.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+		<MauiXaml Update="App.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="AppFlyout.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\FlyoutMenuPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\HorizontalTemplateLayoutPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\FlightPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\HotelPage.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\Forma.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\Flights.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\Hotels.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\Registracija.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	</ItemGroup>
 
 </Project>

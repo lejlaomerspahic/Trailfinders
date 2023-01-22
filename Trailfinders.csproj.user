@@ -19,10 +19,16 @@
     <MauiXaml Update="View\HorizontalTemplateLayoutPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\FlightPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\HotelPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Forma.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Flights.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Hotels.xaml">

@@ -1,47 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Trailfinders.HorizontalTemplateLayoutPage"
              xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews"
              >
-    <ContentPage.BindingContext>
-        <viewmodels:HotelViewModel />
-    </ContentPage.BindingContext>
-    <ScrollView MinimumHeightRequest="1080" >
-        
+    <ScrollView HorizontalOptions="FillAndExpand">
         <VerticalStackLayout BackgroundColor="white">
-            <Border  StrokeThickness="-1" StrokeShape="RoundRectangle 0,0,50,50" HeightRequest="120"  >
+            <Border  StrokeThickness="-1" StrokeShape="RoundRectangle 0,0,30,30" HeightRequest="160"  >
                 <Frame BackgroundColor="#5F9EA0" >
-                    <VerticalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                        <VerticalStackLayout>
                         <Label Text="Find a Home" TextColor="White" FontAttributes="Bold" FontSize="30"></Label>
-                        <Label Text="whenever you are!" TextColor="White" FontAttributes="Italic" FontSize="30"></Label>
+                        <Label Text="wherever you are!" TextColor="White" FontAttributes="Italic" FontSize="30"></Label>
                     </VerticalStackLayout>
+                        <Image Source="slika1.png" Margin="5,0,0,30" HeightRequest="100"></Image>
+                    </HorizontalStackLayout>
                 </Frame>
             </Border>
-
-            <CarouselView x:Name="carouselView"
+            <Frame Margin="0,-40,0,0"
+                   WidthRequest="380"
+                   CornerRadius="35"
+                   VerticalOptions="FillAndExpand"
+                   >
+                  <StackLayout>
+                    <Button Text="Hotels" CornerRadius="30" Clicked="Button_Clicked" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,0,0,0" HorizontalOptions="Start" BackgroundColor="White" ></Button>
+            <CarouselView x:Name="carouselView1"
                       ItemsSource="{Binding Hotels}"
-                      BackgroundColor="White"
-                          Margin="0,20,0,0"
-                      >
+                          BindingContext="{Binding Source={viewmodels:HotelViewModel}}"
+                      BackgroundColor="White">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout >
+                        <StackLayout Margin="0">
                             <Frame
                            HasShadow="True"
                            Margin="5"
                            Padding="0"
-                           WidthRequest="350"
-                           HeightRequest="250"
+                           WidthRequest="320"
+                           HeightRequest="200"
                            HorizontalOptions="Center"
                            CornerRadius="30">
-                                <StackLayout>
-                                    
+                                    <StackLayout>
 
-                                    <Image Source="{Binding ImageUrl}" 
+                                        <Image Source="{Binding ImageUrl}" 
                                    Aspect="AspectFill"
-                                   HeightRequest="300"
+                                   HeightRequest="250"
                                    WidthRequest="380"
                                    HorizontalOptions="Center" />
 
@@ -74,49 +76,168 @@
                                    Margin="30,5,0,0"
                                    TextColor="White"
                                     />
-                                    <Frame Padding="10"
-                   BorderColor="Transparent"
-                   HorizontalOptions="Start"
-                   Margin="-20,-210,0,0"
-                   HasShadow="False"
-                   CornerRadius="20"
-                   WidthRequest="200"
-                                           HeightRequest="45"
-                                           
-                   >
-                                        <HorizontalStackLayout >
-                                            <Button
-                                Text="Hotels"
-                                TextColor="Grey"
-                                FontSize="20"
-                                FontAttributes="Bold"
-                                Clicked="Button_Clicked"
-                                BackgroundColor="White"
-                        WidthRequest="70"
-                        Margin="50,0,0,0"
-                        Padding="5"
-                        HeightRequest="40"
-                                                
-                        
-                >
 
-                                            </Button>
-                                            <Image Source="next.jpg"
-                       HeightRequest="20"
-                       
-                       ></Image>
-                                        </HorizontalStackLayout>
-                                    </Frame>
                                 </StackLayout>
-                                
+
                             </Frame>
 
                         </StackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
+                    <Button Text="Flights" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked1" ></Button>
+                    <CarouselView x:Name="carouselView2"
+                      ItemsSource="{Binding Flights}"
+                          BindingContext="{Binding Source={viewmodels:FlightViewModel}}"
+                      BackgroundColor="White">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout >
+                                    <Frame
+                           HasShadow="True"
+                           Margin="5"
+                           Padding="0"
+                           WidthRequest="320"
+                           HeightRequest="200"
+                           HorizontalOptions="Center"
+                           CornerRadius="30">
+                                        <StackLayout>
 
-           
-        </VerticalStackLayout>
+                                            <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="250"
+                                   WidthRequest="380"
+                                   HorizontalOptions="Center" />
+                                            <HorizontalStackLayout>
+
+                                                <Label Text="{Binding Location}"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                                                <Label Text="{Binding DeparturePlace}" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="30,-230,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                    >
+                                                </Label>
+                                                <Label Text="-" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="0,-230,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                    >
+                                                </Label>
+                                                <Label Text="{Binding ArrivalPlace}" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="0,-230,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                    >
+                                                </Label>
+                                            </HorizontalStackLayout>
+                                            <HorizontalStackLayout Margin="30,-110,0,0">
+                                                <Image
+                                    Source="/Images/flights1.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"
+                                                    ></Image>
+                                                <Label Text="{Binding Details}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   TextColor="White"
+                                    />
+
+                                            </HorizontalStackLayout>
+
+
+                                        </StackLayout>
+
+                                    </Frame>
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <Button Text="Attraction" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" ></Button>
+                    <CarouselView x:Name="carouselView3"
+                      ItemsSource="{Binding Attractions}"
+                          BindingContext="{Binding Source={viewmodels:AttractionViewModel}}"
+                      BackgroundColor="White">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout >
+                                    <Frame
+                           HasShadow="True"
+                           Margin="5"
+                           Padding="0"
+                           WidthRequest="320"
+                           HeightRequest="200"
+                           HorizontalOptions="Center"
+                           CornerRadius="30">
+                                        <StackLayout>
+
+                                            <Image Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="250"
+                                   WidthRequest="380"
+                                   HorizontalOptions="Center" />
+
+                                            <Label Text="{Binding Name}" 
+                                   FontAttributes="Bold"
+                                   FontSize="18"
+                                   TextColor="White"
+                                   Margin="30,-150,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                    >
+                                            </Label>
+
+                                            <HorizontalStackLayout Margin="20,5,0,0"
+                                                   Spacing="5">
+                                                <Image
+                                    Source="/Images/location.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"></Image>
+                                                <Label Text="{Binding Location}"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                                            </HorizontalStackLayout>
+                                            <Label Text="{Binding Details}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   Margin="30,5,0,0"
+                                   TextColor="White"
+                                    />
+
+                                        </StackLayout>
+
+                                    </Frame>
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                </StackLayout>
+                
+            </Frame>
+            </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+

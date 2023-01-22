@@ -14,13 +14,13 @@
                     HasShadow="True"
                     Padding="0"
                     HeightRequest="210"
-                WidthRequest="550"
+                    WidthRequest="550"
                     HorizontalOptions="Center"
                     CornerRadius="30">
 
                 <StackLayout>
 
-                    <Image Source="slika.jpg" 
+                    <Image         Source="slikaa.jpg" 
                                    Aspect="AspectFill"
                                    HeightRequest="250"
                                    WidthRequest="580"
@@ -69,11 +69,8 @@
                 <ListView.ItemTemplate >
                     <DataTemplate >
                         <ViewCell >
-                            <!--BUG: https://github.com/dotnet/maui/issues/11323-->
-                            <!--Sadržaj Frame jednostavno uokviriti u GRID kako bi se izbjegao bug koji nastaje pri rendanju Frmae objekata.-->
-                            <!--Otvoren Grid-->
                             <Grid>
-                                <Frame WidthRequest="380" CornerRadius="20" HeightRequest="110"  Padding="20,0,0,0" Margin="5"  BackgroundColor="WhiteSmoke">
+                                <Frame WidthRequest="380" CornerRadius="20" HeightRequest="110"  Padding="20,0,0,0" Margin="5"  BackgroundColor="White">
 
                                     <HorizontalStackLayout Margin="10">
                                         <Frame
@@ -91,7 +88,7 @@
                                         </Frame>
                                         <VerticalStackLayout VerticalOptions="Center">
                                             <Label 
-                                    BackgroundColor="WhiteSmoke"
+                                    BackgroundColor="white"
                                 Text="{Binding Name}"
                                 TextColor="Black"
                                 HorizontalOptions="Start"
@@ -108,7 +105,7 @@
                                             <HorizontalStackLayout HorizontalOptions="Start"
                                                            Margin="15,0,0,0"
                                                VerticalOptions="Center">
-                                                <Label Text="Price per night: "
+                                                <Label Text="Price for night per person: "
                                                TextColor="Grey"
                                                ></Label>
                                                 <Label
@@ -133,7 +130,6 @@
 
                                     </HorizontalStackLayout>
                                 </Frame>
-                                <!--Zatvoren Grid-->
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
