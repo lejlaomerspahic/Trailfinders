@@ -3,6 +3,8 @@
 using System.Reflection.Metadata;
 using Trailfinders.Data;
 using Trailfinders.Models;
+using Trailfinders.ModelAndViews;
+using Trailfinders.Services;
 
 namespace Trailfinders;
 public partial class HotelPage : ContentPage
@@ -28,9 +30,7 @@ public partial class HotelPage : ContentPage
 
 
 
-
-
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
        if(startDate.Date > endDate.Date)
         {
@@ -55,13 +55,17 @@ public partial class HotelPage : ContentPage
             }
 
 
+        Reservation r = new Reservation();
+        r.Name = name.Text;
+        r.Location= location.Text;
+        r.Price = price*(-1);
+        r.ImageUrl= imageUrl.Source.ToString();
 
-        string poruka =  "\r\nTotal price: " + price*(-1) + " EUR" +
-                                       "\r\nNumber of people: " + count.ToString() +
-                       "\r\nCheck-in date: " + startDate.Date.ToString("dd.M.yyyy.") +
-                                       "\r\nCheck-out date: " + endDate.Date.ToString("dd.M.yyyy.");
-            DisplayAlert("RESERVATION", poruka, "OK");
         
+        ReservationService a = new ReservationService();
+        int res = await a.AddReservation(r);
+
+        DisplayAlert("RESERVATION", "Reservation succeeded", "OK");
     }
 
     private void numberOfPeopleCount2(object sender, EventArgs e)

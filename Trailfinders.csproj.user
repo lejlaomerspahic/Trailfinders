@@ -13,6 +13,9 @@
     <MauiXaml Update="AppFlyout.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="View\Attractions.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="View\FlyoutMenuPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -20,6 +23,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\FlightPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\AttractionPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\HotelPage.xaml">
@@ -35,6 +41,12 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\Registracija.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\Reservations.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\WelcomePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

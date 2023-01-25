@@ -171,7 +171,7 @@
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
-                    <Button Text="Attraction" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" ></Button>
+                    <Button Text="Attraction" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked_1" ></Button>
                     <CarouselView x:Name="carouselView3"
                       ItemsSource="{Binding Attractions}"
                           BindingContext="{Binding Source={viewmodels:AttractionViewModel}}"

@@ -16,7 +16,7 @@
                     Margin="10"
                     Padding="0"
                     WidthRequest="330"
-                    HeightRequest="250"
+                    HeightRequest="200"
                     HorizontalOptions="Center"
                     CornerRadius="30">
                 
@@ -24,44 +24,40 @@
 
                     <Image x:Name="imageUrl" 
                                    Aspect="AspectFill"
-                                   HeightRequest="300"
+                                   HeightRequest="240"
                                    WidthRequest="380"
                                    HorizontalOptions="Center" />
-                    <Button x:Name="name"
-                                   FontAttributes="Bold"
-                                   FontSize="18"
-                                   TextColor="White"
-                                   Margin="30,-150,0,0"
-                                   HorizontalOptions="Start"
-                                   HeightRequest="30"
-                                    Padding="4,0,4,0"
-                                    BackgroundColor="Transparent"
-                                       
-                                    >
-                    </Button>
-
-                    <HorizontalStackLayout Margin="20,5,0,0"
-                                                   Spacing="5">
-                        <Image
-                                    Source="/Images/location.png"
-                                    HeightRequest="20"
-                                    WidthRequest="30"></Image>
-                        <Label x:Name="location"
-                                   HorizontalOptions="Center"
-                                   TextColor="White"
-                                  />
+                    <HorizontalStackLayout Margin="45,-110,0,0" BackgroundColor="Transparent">
+                        <Label 
+                               x:Name="name"
+                                TextColor="White"
+                                HorizontalOptions="Start"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                        <Label 
+                                Text="-"
+                                TextColor="White"
+                                HorizontalOptions="Start"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
+                        <Label 
+                                x:Name="location"
+                                TextColor="White"
+                                HorizontalOptions="Start"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Padding="15,5,0,0"
+                                ></Label>
                     </HorizontalStackLayout>
-                    <Label x:Name="details"
-                                   FontAttributes="Italic"
-                                   HorizontalOptions="Start"
-                                   Margin="30,5,0,0"
-                                   TextColor="White"
-                                    />
                 </StackLayout>
             </Frame>
             
         </StackLayout>
-        <Frame HeightRequest="150"
+        <Frame HeightRequest="105"
                Margin="0,5,0,0"
                HorizontalOptions="Center"
                WidthRequest="370"
@@ -71,7 +67,7 @@
                 <Label x:Name="information" FontSize="16" TextColor="Grey"
                    ></Label>
                 <HorizontalStackLayout>
-                    <Label Text="Cijena jednog nočenja po osobi: " TextColor="Grey" FontSize="17"></Label>
+                    <Label Text="Price of the flight " TextColor="Grey" FontSize="17"></Label>
                     <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
                     <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
                 </HorizontalStackLayout>
@@ -108,14 +104,8 @@
                                x:Name="endDate"/>
             </Frame>
         </HorizontalStackLayout>
-        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,0" Spacing="20">
-            <Button Text="-"
-                        TextColor="White"
-                        FontSize="10"
-                        CornerRadius="50"
-                        HeightRequest="40"
-                        WidthRequest="40"
-                        Clicked="numberOfPeopleCount1"></Button>
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="-50,10,0,0" Spacing="20">
+            
             <Frame>
                 <Label 
                                 x:Name="numberOfPeople"
@@ -123,9 +113,17 @@
                         Text="Number of people: 1"
                         WidthRequest="140"
                         TextColor="Grey"
-                        FontSize="15">
+                        FontSize="15"
+                    >
                 </Label>
             </Frame>
+            <Button Text="-"
+                        TextColor="White"
+                        FontSize="10"
+                        CornerRadius="50"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        Clicked="numberOfPeopleCount1"></Button>
             <Button Text="+"
                         TextColor="White"
                         FontSize="10"
@@ -134,13 +132,38 @@
                         WidthRequest="40"
                         Clicked="numberOfPeopleCount2"></Button>
         </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Start" Margin="30,20,0,0" Spacing="20">
+            <Frame >
+                <HorizontalStackLayout>
+                    <Label 
+                              VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Text="Type of flight:"
+                        WidthRequest="120"
+                        TextColor="Grey"
+                        FontSize="15">
+                    </Label>
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox x:Name="OneWay"></CheckBox>
+                            <Label VerticalOptions="Center" Text="One way" TextColor="#5F9EA0"></Label>
+                        </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                            <CheckBox  x:Name="Return"></CheckBox>
+                            <Label VerticalOptions="Center" Text="Return" TextColor="#5F9EA0"></Label>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+            
+        </HorizontalStackLayout>
         <Frame  
                                CornerRadius="20"
                                BorderColor="#5F9EA0"
                                WidthRequest="200"
                                HeightRequest="55"
                                Padding="0"
-                               Margin="0,40,0,0"
+                               Margin="150,30,0,0"
                                HorizontalOptions="Center">
             <Button        Text="Reserved" 
                            TextColor="#5F9EA0"
@@ -149,11 +172,7 @@
                            FontSize="20"
                            BackgroundColor="White"
                            HorizontalOptions="Center"
-                           Clicked="Button_Clicked"
-            ></Button>
-
+                           Clicked="Button_Clicked"></Button>
         </Frame>
-        <Label x:Name="statusMessage">
-        </Label> 
     </VerticalStackLayout>
 </ContentPage>

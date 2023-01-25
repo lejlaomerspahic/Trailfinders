@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 		<None Remove="Resources\Images\srce.jpg" />
+		<None Remove="Resources\Images\strelica.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -69,8 +70,14 @@
 		<Compile Update="View\Flights.xaml.cs">
 		  <DependentUpon>Flights.xaml</DependentUpon>
 		</Compile>
+		<Compile Update="View\AttractionPage.xaml.cs">
+		  <DependentUpon>AttractionPage.xaml</DependentUpon>
+		</Compile>
 		<Compile Update="View\LoginPage.xaml.cs">
 			<DependentUpon>LoginPage.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="View\Reservations.xaml.cs">
+		  <DependentUpon>Reservations.xaml</DependentUpon>
 		</Compile>
 	</ItemGroup>
 
@@ -84,6 +91,9 @@
 		<MauiXaml Update="AppFlyout.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="View\Attractions.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="View\FlyoutMenuPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
@@ -91,6 +101,9 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="View\FlightPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\AttractionPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="View\HotelPage.xaml">
@@ -107,6 +120,12 @@
 		</MauiXaml>
 		<MauiXaml Update="View\Registracija.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\Reservations.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="View\WelcomePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
 

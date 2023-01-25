@@ -12,14 +12,17 @@
             <x:Array Type="{x:Type local:FlyoutPageItem}" >
                 <local:FlyoutPageItem Title="Stays"
                                       IconSource="stays.jpg"                                  
-                                      TargetType="{x:Type local:HorizontalTemplateLayoutPage}"
+                                      TargetType="{x:Type local:Hotels}"
                                       />
                 <local:FlyoutPageItem Title="Attraction"
                                       IconSource="carousel.png"
-                                      TargetType="{x:Type local:HorizontalTemplateLayoutPage}" />
+                                      TargetType="{x:Type local:Attractions}" />
                 <local:FlyoutPageItem Title="Flights"
                                       IconSource="flights.png"
-                                      TargetType="{x:Type local:HorizontalTemplateLayoutPage}" />
+                                      TargetType="{x:Type local:Flights}" />
+                <local:FlyoutPageItem Title="Reservations"
+                                      IconSource="flights.png"
+                                      TargetType="{x:Type local:Reservations}" />
             </x:Array>
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>

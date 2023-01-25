@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trailfinders.AttractionPage"
+             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             android:Application.WindowSoftInputModeAdjust="Pan">
+    <VerticalStackLayout BackgroundColor="white">
+
+        <StackLayout >
+            <Label Text="Details"
+                   TextColor="Grey"
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"></Label>
+            <Frame 
+                    HasShadow="True"
+                    Margin="10"
+                    Padding="0"
+                    WidthRequest="360"
+                    HeightRequest="450"
+                    HorizontalOptions="Center"
+                    CornerRadius="25">
+                
+                <StackLayout>
+
+                    <Image x:Name="imageUrl" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="500"
+                                   WidthRequest="400"
+                                   HorizontalOptions="Center" />
+                    <Button x:Name="name"
+                                   FontAttributes="Bold"
+                                   FontSize="25"
+                                   TextColor="White"
+                                   Margin="25,-150,0,0"
+                                   HorizontalOptions="Start"
+                                   HeightRequest="30"
+                                    Padding="4,0,4,0"
+                                    BackgroundColor="Transparent"
+                                       
+                                    >
+                    </Button>
+
+                    <HorizontalStackLayout Margin="20,5,0,0"
+                                                   Spacing="5">
+                        <Image
+                                    Source="/Images/location.png"
+                                    HeightRequest="20"
+                                    WidthRequest="30"></Image>
+                        <Label x:Name="location"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"
+                                  />
+                    </HorizontalStackLayout>
+                    <Label x:Name="details"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Start"
+                                   Margin="30,5,0,0"
+                                   TextColor="White"
+                                    />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+        <Frame HeightRequest="250"
+               Margin="0,5,0,0"
+               HorizontalOptions="Center"
+               WidthRequest="370"
+               HasShadow="False"
+               >
+            <VerticalStackLayout>
+                <Label x:Name="information" FontSize="17" TextColor="Grey"
+                   ></Label>
+                <HorizontalStackLayout>
+                    <Label Text="Ticket price: " TextColor="Grey" FontSize="17"></Label>
+                    <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="20"></Label>
+                    <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+
+       
+    </VerticalStackLayout>
+</ContentPage>

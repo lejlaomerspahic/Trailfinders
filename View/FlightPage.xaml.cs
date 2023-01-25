@@ -1,12 +1,14 @@
 using System.Reflection.Metadata;
 using Trailfinders.Data;
 using Trailfinders.Models;
+using Trailfinders.Services;
 
 namespace Trailfinders;
 public partial class FlightPage : ContentPage
 {
     int count = 1;
     Flight hotel;
+    public List<Flight> Lista { get; set; }
 
     public FlightPage(Flight odabraniHotel)
     {
@@ -14,51 +16,62 @@ public partial class FlightPage : ContentPage
         name.Text = odabraniHotel.DeparturePlace;
         location.Text = odabraniHotel.ArrivalPlace;
         imageUrl.Source = odabraniHotel.ImageUrl;
-        details.Text = odabraniHotel.Details;
         information.Text = odabraniHotel.Information;
         price.Text = odabraniHotel.Price.ToString();
         hotel =odabraniHotel;
 
+     
         startDate.MinimumDate = DateTime.Today;
-        endDate.MinimumDate = startDate.Date.AddDays(1);
-        endDate.MaximumDate = startDate.MinimumDate.AddDays(123);
+
     }
 
 
 
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
+        double total = 0.0;
+        Console.WriteLine("1 je " + total);
        if(startDate.Date > endDate.Date)
         {
             DateTime temp = startDate.Date;
             startDate.Date = endDate.Date;
             endDate.Date = temp;
 
-        }else if(startDate.Date == endDate.Date)
+        }else if(OneWay.IsChecked)
         {
-            DisplayAlert("Error", "Check-in and check-out dates are the same!", "OK");
+            startDate.Date = endDate.Date;
+            total += hotel.Price;
+
+        }else if (Return.IsChecked)
+        {
+            total+= hotel.Price * 1.8;
+
+        }else if(!OneWay.IsChecked || !Return.IsChecked)
+        {
+            DisplayAlert("RESERVATION", "Must choose type of flight", "OK");
         }
 
-        var numberOfDays = (startDate.Date - endDate.Date).TotalDays;
-            var price = 0.0;
-            if (count > 1)
-            {
-                price = hotel.Price * (count * 0.7)*numberOfDays;
-            }
-            else
-            {
-                price = hotel.Price  * numberOfDays;
-            }
+        total *= count;
+
+        Reservation r = new Reservation();
+        r.Name = name.Text;
+        r.Location = location.Text;
+        r.Price = total*(-1);
+        r.ImageUrl = imageUrl.Source.ToString();
 
 
+        ReservationService a = new ReservationService();
+        int res = await a.AddReservation(r);
 
-        string poruka =  "\r\nTotal price: " + price*(-1) + " EUR" +
-                                       "\r\nNumber of people: " + count.ToString() +
-                       "\r\nCheck-in date: " + startDate.Date.ToString("dd.M.yyyy.") +
-                                       "\r\nCheck-out date: " + endDate.Date.ToString("dd.M.yyyy.");
-            DisplayAlert("RESERVATION", poruka, "OK");
-        
+        DisplayAlert("RESERVATION", "Reservation succeeded", "OK");
+        List<Reservation> list = await a.GetReservationList();
+        for (int i = 0; i < list.Count; i++)
+        {
+            Console.WriteLine(list[i].Price);
+
+        }
+
     }
 
     private void numberOfPeopleCount2(object sender, EventArgs e)

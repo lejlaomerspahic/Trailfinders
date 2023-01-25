@@ -61,7 +61,7 @@ namespace Trailfinders.ModelAndViews
                 Location = "Istanbul, Turkey",
                 Details = "Museum",
                 Information = "This enormous palace was the Imperial residence of Ottoman sultans for almost 400 years. Although much of the palace is not accessible, the daily tours of the Harem are of great interest to tourists. ",
-                ImageUrl = "https://th.bing.com/th/id/OIP.yLsI4Tgt2mf5VOYIvgzxXwHaE7?pid=ImgDet&rs=1",
+                ImageUrl = "https://th.bing.com/th/id/R.4c5efedd51e4b590939d82c47a682688?rik=9XAdVAAL5VMPDg&pid=ImgRaw&r=0",
                 Price = 25,
             });
 
@@ -101,7 +101,7 @@ namespace Trailfinders.ModelAndViews
             source.Add(new Attraction
             {
                 ID = 6,
-                Name = "Hungarian Parliament Building",
+                Name = "Hungarian Parliament",
                 Location = "Budapest, Hungary",
                 Details = "Architectural Buildings",
                 Information = "The domed neo-Gothic structre was inspired by the British House of Parliament and serves as both a vibrant government center and a proud city landmark on the banks of the Danube.",

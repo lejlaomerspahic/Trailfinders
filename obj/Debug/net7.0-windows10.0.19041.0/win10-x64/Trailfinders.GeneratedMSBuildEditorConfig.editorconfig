@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.Resources.Sty
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/lejla/Desktop/trailfinders/View/AttractionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.AttractionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AttractionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AttractionPage.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/Attractions.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Attractions.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Attractions.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Attractions.xaml
+
 [C:/Users/lejla/Desktop/trailfinders/View/FlightPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.FlightPage.xaml
@@ -87,3 +99,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Registracija.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Registracija.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Registracija.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/Reservations.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.Reservations.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Reservations.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Reservations.xaml
+
+[C:/Users/lejla/Desktop/trailfinders/View/WelcomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Trailfinders.View.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\WelcomePage.xaml

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Trailfinders.View.Flights"
+             x:Class="Trailfinders.Flights"
              xmlns:viewmodels="clr-namespace:Trailfinders.ModelAndViews">
     <ContentPage.BindingContext>
         <viewmodels:FlightViewModel />
@@ -63,9 +63,10 @@
 
             <ListView ItemsSource="{Binding Flights}"
                       RowHeight="130"
-                      Margin="0,0,0,0">
-                <!--ItemTapped="ListView_ItemTapped"-->
+                      Margin="0,0,0,0"
                       
+                ItemTapped="ListView_ItemTapped">
+
                 <ListView.ItemTemplate >
                     <DataTemplate >
                         <ViewCell >
@@ -125,7 +126,7 @@
                                             <HorizontalStackLayout HorizontalOptions="Start"
                                                            Margin="15,0,0,0"
                                                VerticalOptions="Center">
-                                                <Label Text="Price per night: "
+                                                <Label Text="Price of the flight: "
                                                TextColor="Grey"
                                                ></Label>
                                                 <Label

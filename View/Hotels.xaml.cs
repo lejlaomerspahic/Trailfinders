@@ -1,7 +1,7 @@
 using Trailfinders.ModelAndViews;
 using Trailfinders.Models;
 
-namespace Trailfinders.View;
+namespace Trailfinders;
 
 public partial class Hotels : ContentPage
 {
