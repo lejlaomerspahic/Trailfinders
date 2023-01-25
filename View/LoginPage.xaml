@@ -2,70 +2,90 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Trailfinders.LoginPage"
-             BackgroundImageSource="/Images/sika.jpg">
+           BackgroundImageSource="pozadina.jpg"
+             >
 
     <VerticalStackLayout
         HorizontalOptions="CenterAndExpand"
-        VerticalOptions="Center"
+        Margin="0,220,0,0"
         Spacing="7"
-            Padding="0,150,0,0">
-        <Image Source="slika1.png"
-                   HeightRequest="150"/>
-        <Label Text="Username"
-                       TextColor="#ffffff"
-                       FontSize="20"></Label>
-        <Frame
-            BackgroundColor="White"
+       >
+        <Label  Text="Sign In"
+                TextColor="White"
+                FontSize="35"
+                   FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                Margin="0,200,0,0"
+                />
+        <Frame CornerRadius="30"
+               HeightRequest="320"
+               Padding="20"
+                BackgroundColor="Transparent">
+            <StackLayout>
+               
+                <Frame
+            BackgroundColor="WhiteSmoke"
             WidthRequest="350"
-            CornerRadius="10"
+                      HeightRequest="50"
+            CornerRadius="5"
             Padding="0"
-            BorderColor="White">
-            <Entry
+            BorderColor="White" Margin="0,0,0,20">
+                    <Entry
                  Text="{Binding username}"
                 x:Name="UsernamEntry"
                 Placeholder="Username"
-                TextColor="#5F9EA0"
-                PlaceholderColor="DarkSlateGray"
+                TextColor="#0a7e8c"
+                PlaceholderColor="#0a7e8c"
                 HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
                 />
-        </Frame>
-        <Label Text="Password"
-               TextColor="#ffffff"
-                FontSize="20"></Label>
-        <Frame
-            BackgroundColor="White"
+                </Frame>
+               
+                <Frame
+            BackgroundColor="WhiteSmoke"
             WidthRequest="350"
-            CornerRadius="10"
+            CornerRadius="5"
             Padding="0"
             Margin="0,0,0,20"
+                      HeightRequest="50"
                  BorderColor="White">
 
-            <Entry
+                    <Entry
                  Text="{Binding password}"
                 x:Name="PassEntry"
                 Placeholder="Password"
-                TextColor="#5F9EA0"
-                PlaceholderColor="DarkSlateGray"
+                TextColor="#0a7e8c"
+                PlaceholderColor="#0a7e8c"
                 IsPassword="True"
                 HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
                 />
-        </Frame>
-        <Button
-            Text="Login!"
-            BackgroundColor="#5F9EA0"
+                </Frame>
+                <Button
+            Text="Sign in!"
+                    CornerRadius="20"
+            BackgroundColor="#0a7e8c"
                 TextColor="White"
                 FontAttributes="Bold"
+                    HeightRequest="50"
                 Clicked="PrijavaButton_Clicked"
+                    Margin="0,0,0,10"
+                     FontSize="17"
             />
-        <Button
+                <Button
             Text="Sing up!"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    FontSize="17"
             BackgroundColor="Transparent"
             TextColor="White"
-            BorderColor="#5F9EA0"
+            BorderColor="#0a7e8c"
             BorderWidth="2"
             FontAttributes="Bold"
             Clicked="RegisterButton_Clicked"
             />
+            </StackLayout>
+        </Frame>
     </VerticalStackLayout>
 
 </ContentPage>

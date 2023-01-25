@@ -23,7 +23,10 @@ public partial class Reservations : ContentPage
         for (int i = 0; i < reservations.Count; i++)
         {
             reservations[i].ImageUrl = reservations[i].ImageUrl.Replace("Uri: ", "");
-            
+            String[] temp = reservations[i].Location.Split(',');
+            reservations[i].Location = temp[0];
+
+
         }
         listViewReservations.ItemsSource = reservations;
         

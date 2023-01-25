@@ -13,7 +13,7 @@ public partial class Registracija : ContentPage
         {
             if (PassEntry.Text != PassEntryAgain.Text)
             {
-                DisplayAlert("Greška", "Korisnička šifra i ponovljena korisnička šifra moraju biti identične!", "OK");
+                DisplayAlert("Error", "Password and repeated password must be identical!", "OK");
             }
             else
             {
@@ -28,7 +28,7 @@ public partial class Registracija : ContentPage
         }
         else
         {
-            DisplayAlert("Greška", "Sva polja moraju biti specificirana!", "OK");
+            DisplayAlert("Error", "All fields must be filled!", "OK");
         }
     }
 

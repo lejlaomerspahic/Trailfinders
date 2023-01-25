@@ -2,79 +2,86 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Trailfinders.Registracija"
-             BackgroundImageSource="/Images/sika.jpg">
+             BackgroundImageSource="pozadina.jpg">
     <VerticalStackLayout
         HorizontalOptions="CenterAndExpand"
         VerticalOptions="Center"
         Padding="0,150,0,0"
         Spacing="7">
-        <Image Source="slika1.png"
-               HeightRequest="150"/>
-        <Label Text="Username"
-               TextColor="#ffffff"
-               FontSize="20"></Label>
+        <Label  Text="Sign Up"
+                TextColor="White"
+                FontSize="35"
+                   FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                Margin="0,200,0,15"
+                />
         <Frame
             BackgroundColor="White"
             WidthRequest="350"
-            CornerRadius="10"
+            CornerRadius="5"
             Padding="0"
-            BorderColor="White">
-                <Entry
+            BorderColor="White"
+            HeightRequest="50"
+            Margin="0,0,0,15">
+            <Entry
                      Text="{Binding usernameRegistration}"
                 x:Name="UsernamEntry"
                 Placeholder="Username"
                 TextColor="#5F9EA0"
-                PlaceholderColor="#5F9EA0"
+                PlaceholderColor="#0a7e8c"
                 HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
                 />
-            </Frame>
-        <Label Text="Password"
-                       TextColor="#ffffff"
-                       FontSize="20"></Label>
-            <Frame
+        </Frame>
+        <Frame
                 BorderColor="White"
             BackgroundColor="White"
             WidthRequest="350"
-            CornerRadius="10"
-            Padding="0">
-                <Entry
+            CornerRadius="5"
+            Padding="0" 
+            HeightRequest="50"
+            Margin="0,0,0,15">
+            <Entry
                     Text="{Binding passwordRegistration}"
                 x:Name="PassEntry"
                 Placeholder="Password"
-                TextColor="#5F9EA0"
+                TextColor="#0a7e8c"
                 PlaceholderColor="#5F9EA0"
                 IsPassword="True"
                 HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
                 />
-            </Frame>
-            <Label Text="Enter you new password again!"
-                   TextColor="#ffffff"
-                   FontSize="20"></Label>
-            <Frame
+        </Frame>
+        <Frame
                 BorderColor="White"
             BackgroundColor="White"
             WidthRequest="350"
-            CornerRadius="10"
+            CornerRadius="5"
             Padding="0"
-            Margin="0,0,0,20">
+            Margin="0,0,0,15"
+                    HeightRequest="50">
                 <Entry
                     Text="{Binding passwordRegistration2}"
                 x:Name="PassEntryAgain"
-                Placeholder="Password"
-                TextColor="#5F9EA0"
+                Placeholder="Repeat password"
+                TextColor="#0a7e8c"
+                    WidthRequest="120"
                 PlaceholderColor="#5F9EA0"
                 IsPassword="True"
                 HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
                 />
             </Frame>
         <Button
             Text="Sign up!"
             BackgroundColor="Transparent"
             TextColor="White"
-            BorderColor="#5F9EA0"
+            BorderColor="#0a7e8c"
+            CornerRadius="20"
             BorderWidth="2"
                 FontAttributes="Bold"
             Clicked="CreateUserButton_Clicked"
+             HeightRequest="50"
             />
     </VerticalStackLayout>
     </ContentPage>

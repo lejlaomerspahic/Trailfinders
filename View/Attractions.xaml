@@ -13,17 +13,17 @@
             <Frame 
                     HasShadow="True"
                     Padding="0"
-                    HeightRequest="210"
-                    WidthRequest="550"
+                    HeightRequest="220"
+                    WidthRequest="500"
                     HorizontalOptions="Center"
                     CornerRadius="30">
                 <StackLayout>
-                    <Image         Source="attractionnn.jpg" 
+                    <Image         Source="atractions1.jpg" 
                                    Aspect="AspectFill"
-                                   HeightRequest="270"
+                                   HeightRequest="240"
                                    WidthRequest="420"
                                    HorizontalOptions="Center"/>
-                    <Frame Margin="0,-220,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
+                    <Frame Margin="0,-200,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
                         <Label 
                                    Text="Attractions"
                                    FontAttributes="Bold"
@@ -106,14 +106,14 @@
                                                 <Label
                                         Text="{Binding Price}"
                                         FontSize="14"
-                                        TextColor="#5F9EA0"
+                                        TextColor="#0a7e8c"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                                     FontAttributes="Bold"
                                 ></Label>
                                                 <Label
                                                      FontSize="14"
-                                        TextColor="#5F9EA0"
+                                        TextColor="#0a7e8c"
                                         VerticalOptions="Center"
                                          Text="€"
                                                     FontAttributes="Bold"

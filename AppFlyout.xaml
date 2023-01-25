@@ -8,7 +8,7 @@
     <FlyoutPage.Detail >
         <NavigationPage >
             <x:Arguments >
-                <local:WelcomePage />
+                <local:HorizontalTemplateLayoutPage />
             </x:Arguments>
         </NavigationPage>
     </FlyoutPage.Detail>

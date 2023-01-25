@@ -20,13 +20,13 @@
 
                 <StackLayout>
 
-                    <Image         Source="air1.jpg" 
+                    <Image         Source="avion.png" 
                                    Aspect="AspectFill"
-                                   HeightRequest="260"
+                                   HeightRequest="230"
                                    WidthRequest="410"
                                    HorizontalOptions="Center" 
                            />
-                    <Frame Margin="0,-210,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
+                    <Frame Margin="0,-180,150,0" BackgroundColor="Transparent" BorderColor="white" HeightRequest="90" CornerRadius="10" WidthRequest="350" >
                         <Label 
                                    Text="Flights"
                                    FontAttributes="Bold"
@@ -132,14 +132,14 @@
                                                 <Label
                                         Text="{Binding Price}"
                                         FontSize="14"
-                                        TextColor="#5F9EA0"
+                                        TextColor="#0a7e8c"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                                     FontAttributes="Bold"
                                 ></Label>
                                                 <Label
                                                      FontSize="14"
-                                        TextColor="#5F9EA0"
+                                        TextColor="#0a7e8c"
                                         VerticalOptions="Center"
                                          Text="€"
                                                     FontAttributes="Bold"

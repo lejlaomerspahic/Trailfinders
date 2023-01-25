@@ -7,7 +7,7 @@
     <ScrollView HorizontalOptions="FillAndExpand">
         <VerticalStackLayout BackgroundColor="white">
             <Border  StrokeThickness="-1" StrokeShape="RoundRectangle 0,0,30,30" HeightRequest="160"  >
-                <Frame BackgroundColor="#5F9EA0" >
+                <Frame BackgroundColor="#0a7e8c" >
                     <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Center">
                         <VerticalStackLayout>
                         <Label Text="Find a Home" TextColor="White" FontAttributes="Bold" FontSize="30"></Label>
@@ -23,7 +23,7 @@
                    VerticalOptions="FillAndExpand"
                    >
                   <StackLayout>
-                    <Button Text="Hotels" CornerRadius="30" Clicked="Button_Clicked" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,0,0,0" HorizontalOptions="Start" BackgroundColor="White" ></Button>
+                    <Button Text="Special hotel" CornerRadius="30" Clicked="Button_Clicked" TextColor="#0a7e8c" FontAttributes="Italic" FontSize="25" Padding="15,0,0,0" HorizontalOptions="Start" BackgroundColor="White" ></Button>
             <CarouselView x:Name="carouselView1"
                       ItemsSource="{Binding Hotels}"
                           BindingContext="{Binding Source={viewmodels:HotelViewModel}}"
@@ -85,7 +85,7 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-                    <Button Text="Flights" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked1" ></Button>
+                    <Button Text="Popular flights" CornerRadius="30" FontAttributes="Italic" TextColor="#0a7e8c" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked1" ></Button>
                     <CarouselView x:Name="carouselView2"
                       ItemsSource="{Binding Flights}"
                           BindingContext="{Binding Source={viewmodels:FlightViewModel}}"
@@ -171,7 +171,7 @@
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
-                    <Button Text="Attraction" CornerRadius="30"  TextColor="#5F9EA0" FontAttributes="Bold" FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked_1" ></Button>
+                    <Button Text="Most visited attractions" CornerRadius="30" FontAttributes="Italic" TextColor="#0a7e8c"  FontSize="25" Padding="15,10,0,0" HorizontalOptions="Start" BackgroundColor="White" Clicked="Button_Clicked_1" ></Button>
                     <CarouselView x:Name="carouselView3"
                       ItemsSource="{Binding Attractions}"
                           BindingContext="{Binding Source={viewmodels:AttractionViewModel}}"

@@ -73,8 +73,8 @@
                    ></Label>
                 <HorizontalStackLayout>
                     <Label Text="Price for night per person: " TextColor="Grey" FontSize="17"></Label>
-                    <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
-                    <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
+                    <Label x:Name="price" TextColor="#0a7e8c" FontAttributes="Bold" FontSize="17"></Label>
+                    <Label Text="€" TextColor="#0a7e8c" FontAttributes="Bold" FontSize="17"></Label>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Frame>
@@ -86,7 +86,7 @@
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,10,0,10">
             <Frame  
                                CornerRadius="10"
-                               BackgroundColor="#5F9EA0"
+                               BackgroundColor="#0a7e8c"
                                WidthRequest="170"
                                HeightRequest="45"
                                Padding="0"
@@ -100,7 +100,7 @@
             </Frame>
             <Frame  
                                CornerRadius="10"
-                               BackgroundColor="#5F9EA0"
+                               BackgroundColor="#0a7e8c"
                                WidthRequest="170"
                                HeightRequest="45"
                                Padding="0"
@@ -148,14 +148,14 @@
 
         <Frame  
                                CornerRadius="20"
-                               BorderColor="#5F9EA0"
+                               BorderColor="#0a7e8c"
                                WidthRequest="200"
                                HeightRequest="55"
                                Padding="0"
                                Margin="0,40,0,0"
                                HorizontalOptions="Center">
             <Button        Text="Reserved" 
-                           TextColor="#5F9EA0"
+                           TextColor="#0a7e8c"
                            HeightRequest="40"
                            WidthRequest="180"
                            FontSize="20"

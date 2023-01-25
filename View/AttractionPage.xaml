@@ -73,8 +73,8 @@
                    ></Label>
                 <HorizontalStackLayout>
                     <Label Text="Ticket price: " TextColor="Grey" FontSize="17"></Label>
-                    <Label x:Name="price" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="20"></Label>
-                    <Label Text="€" TextColor="#5F9EA0" FontAttributes="Bold" FontSize="17"></Label>
+                    <Label x:Name="price" TextColor="#0a7e8c" FontAttributes="Bold" FontSize="20"></Label>
+                    <Label Text="€" TextColor="#0a7e8c" FontAttributes="Bold" FontSize="17"></Label>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Frame>

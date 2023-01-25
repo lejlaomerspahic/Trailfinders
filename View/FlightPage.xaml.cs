@@ -25,14 +25,11 @@ public partial class FlightPage : ContentPage
 
     }
 
-
-
-
     private async void Button_Clicked(object sender, EventArgs e)
     {
         double total = 0.0;
         Console.WriteLine("1 je " + total);
-       if(startDate.Date > endDate.Date)
+        if (startDate.Date > endDate.Date)
         {
             DateTime temp = startDate.Date;
             startDate.Date = endDate.Date;
@@ -45,11 +42,9 @@ public partial class FlightPage : ContentPage
 
         }else if (Return.IsChecked)
         {
+            OneWay.IsChecked = false;
             total+= hotel.Price * 1.8;
 
-        }else if(!OneWay.IsChecked || !Return.IsChecked)
-        {
-            DisplayAlert("RESERVATION", "Must choose type of flight", "OK");
         }
 
         total *= count;
@@ -57,7 +52,7 @@ public partial class FlightPage : ContentPage
         Reservation r = new Reservation();
         r.Name = name.Text;
         r.Location = location.Text;
-        r.Price = total*(-1);
+        r.Price = total;
         r.ImageUrl = imageUrl.Source.ToString();
 
 
@@ -66,11 +61,7 @@ public partial class FlightPage : ContentPage
 
         DisplayAlert("RESERVATION", "Reservation succeeded", "OK");
         List<Reservation> list = await a.GetReservationList();
-        for (int i = 0; i < list.Count; i++)
-        {
-            Console.WriteLine(list[i].Price);
 
-        }
 
     }
 

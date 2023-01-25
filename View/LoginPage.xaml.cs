@@ -21,15 +21,15 @@ public partial class LoginPage : ContentPage
     {
         if (_user == null)
         {
-            DisplayAlert("Greška", "Nema registrovanih korisnika!", "OK");
+            DisplayAlert("Error", "There are no registered users!", "OK");
         }
         else if (UsernamEntry.Text != _user.UserName)
         {
-            DisplayAlert("Greška", "Korisničko ime ne postoji u sistemu!", "OK");
+            DisplayAlert("Error", "Username doesn't exist in the system!", "OK");
         }
         else if (PassEntry.Text != _user.Password)
         {
-            DisplayAlert("Greška", "Pogrešna korisnička šifra!", "OK");
+            DisplayAlert("Error", "Wrong password!", "OK");
         }
         else
         {

@@ -21,7 +21,7 @@
                                       IconSource="flights.png"
                                       TargetType="{x:Type local:Flights}" />
                 <local:FlyoutPageItem Title="Reservations"
-                                      IconSource="flights.png"
+                                      IconSource="reservation.png"
                                       TargetType="{x:Type local:Reservations}" />
             </x:Array>
         </CollectionView.ItemsSource>
@@ -38,7 +38,7 @@
                            Margin="20,0"
                            Text="{Binding Title}"
                            FontSize="20"
-                           TextColor="#5F9EA0"
+                           TextColor="#0a7e8c"
                            FontAttributes="Bold"
                            VerticalOptions="Center" />
                 </Grid>
