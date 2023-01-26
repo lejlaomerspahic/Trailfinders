@@ -9,6 +9,6 @@ public partial class WelcomePage : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-		await Navigation.PushModalAsync(new LoginPage());
+        await Navigation.PushModalAsync(new LoginPage());
     }
 }

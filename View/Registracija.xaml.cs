@@ -7,7 +7,7 @@ public partial class Registracija : ContentPage
 		InitializeComponent();
 	}
 
-    private void CreateUserButton_Clicked(object sender, EventArgs e)
+    private async void CreateUserButton_Clicked(object sender, EventArgs e)
     {
         if ((UsernamEntry.Text != null) && (PassEntry.Text != null) && (PassEntryAgain.Text != null))
         {
@@ -22,7 +22,8 @@ public partial class Registracija : ContentPage
                 _user.UserName = UsernamEntry.Text;
                 _user.Password = PassEntry.Text;
 
-                Navigation.PushModalAsync(new LoginPage(_user));
+                await Navigation.PopToRootAsync();
+                await Navigation.PushModalAsync(new LoginPage(_user));
               
             }
         }

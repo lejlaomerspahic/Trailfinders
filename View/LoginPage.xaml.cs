@@ -17,7 +17,7 @@ public partial class LoginPage : ContentPage
 
     }
 
-    private void PrijavaButton_Clicked(object sender, EventArgs e)
+    private async void PrijavaButton_Clicked(object sender, EventArgs e)
     {
         if (_user == null)
         {
@@ -33,7 +33,7 @@ public partial class LoginPage : ContentPage
         }
         else
         {
-            Navigation.PushModalAsync(new AppFlyout());
+            await Navigation.PushModalAsync(new AppFlyout());
         }
     }
 
