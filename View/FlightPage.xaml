@@ -74,7 +74,7 @@
             </VerticalStackLayout>
         </Frame>
 
-        <HorizontalStackLayout Spacing="40" Margin="0,5,0,0" HorizontalOptions="Center">
+        <HorizontalStackLayout Spacing="40" Margin="0,0,0,0" HorizontalOptions="Center">
             <Label Text="Check-in date   "   TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
             <Label Text="Check-out date" TextColor="Gray" FontSize="20" VerticalTextAlignment="Center"></Label>
          </HorizontalStackLayout>
@@ -132,7 +132,7 @@
                         WidthRequest="40"
                         Clicked="numberOfPeopleCount2"></Button>
         </HorizontalStackLayout>
-        <HorizontalStackLayout HorizontalOptions="Start" Margin="30,20,0,0" Spacing="20">
+        <HorizontalStackLayout HorizontalOptions="Start" Margin="20,20,0,0" Spacing="20">
             <Frame >
                 <HorizontalStackLayout>
                     <Label 
@@ -163,7 +163,7 @@
                                WidthRequest="200"
                                HeightRequest="55"
                                Padding="0"
-                               Margin="150,30,0,0"
+                               Margin="130,15,0,0"
                                HorizontalOptions="Center">
             <Button        Text="Reserved" 
                            TextColor="#5F9EA0"

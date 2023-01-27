@@ -5,9 +5,8 @@
              BackgroundImageSource="welcome.jpg">
     <VerticalStackLayout>
         <StackLayout>
-            <Image Source="slika2.png" HeightRequest="150" Margin="0,50,0,0"></Image>
-            
-            <Label Text="Are you ready?" FontSize="35" FontAttributes="Bold" Margin="30,330,0,0"></Label>
+
+            <Label Text="Are you ready?" FontSize="40" FontAttributes="Bold" Margin="30,520,0,0"></Label>
             <Label Text="Find your destination easily and travel anywhere you want with us." Margin="30,0,70,0" FontSize="23"></Label>
             <HorizontalStackLayout Spacing="25" HeightRequest="80" >
                 <Frame WidthRequest="230"  Margin="30,20,0,0" CornerRadius="20" Padding="0" BackgroundColor="#B8B8B8" >

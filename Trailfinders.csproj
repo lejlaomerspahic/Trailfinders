@@ -32,11 +32,9 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\slika1.svg" Color="#0a7e8c" />
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Images\lejla12.png" BaseSize="128,128" />
-
+		<MauiSplashScreen Include="Resources\Splash\slika1.png" Color="#0a7e8c" />
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
@@ -49,8 +47,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\aaa.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\AppIcon\slika1.png" />
+		<None Remove="Resources\Images\aaa.jpg" />
 		<None Remove="Resources\Images\srce.jpg" />
 		<None Remove="Resources\Images\strelica.png" />
+		<None Remove="Resources\Splash\slika1.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\slika1.png" />
+	  <MauiImage Include="Resources\Splash\slika1.png" />
 	</ItemGroup>
 
 	<ItemGroup>
